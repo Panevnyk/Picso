@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHistoryItemCollectionViewCell" id="9Wu-lG-RLx" customClass="HomeHistoryItemCollectionViewCell" customModule="RetouchHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WrG-59-MvU">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="279"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-rk-u4X">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="279"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyV-T2-4Zp" customClass="StatusButton" customModule="RetouchCommon">
+                        <rect key="frame" x="282" y="252" width="30" height="24"/>
+                        <color key="backgroundColor" red="0.59223808929999999" green="0.68085944890000005" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="auO-kj-SZt"/>
+                        </constraints>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IX-EZ-s0F" customClass="StatusButton" customModule="RetouchCommon">
+                        <rect key="frame" x="282" y="3" width="30" height="24"/>
+                        <color key="backgroundColor" red="0.59223808929999999" green="0.68085944890000005" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="f42-eo-M75"/>
+                        </constraints>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7ad-rk-u4X" secondAttribute="trailing" id="9HB-gC-h0s"/>
+                    <constraint firstItem="7ad-rk-u4X" firstAttribute="top" secondItem="WrG-59-MvU" secondAttribute="top" id="Hde-vv-66Q"/>
+                    <constraint firstItem="7ad-rk-u4X" firstAttribute="leading" secondItem="WrG-59-MvU" secondAttribute="leading" id="PXH-Ot-TnJ"/>
+                    <constraint firstAttribute="bottom" secondItem="7ad-rk-u4X" secondAttribute="bottom" id="RDD-LB-jxK"/>
+                    <constraint firstAttribute="trailing" secondItem="3IX-EZ-s0F" secondAttribute="trailing" constant="3" id="bqb-cK-Pjf"/>
+                    <constraint firstAttribute="bottom" secondItem="uyV-T2-4Zp" secondAttribute="bottom" constant="3" id="fuf-qi-ASY"/>
+                    <constraint firstAttribute="trailing" secondItem="uyV-T2-4Zp" secondAttribute="trailing" constant="3" id="k41-Ca-YNu"/>
+                    <constraint firstItem="3IX-EZ-s0F" firstAttribute="top" secondItem="WrG-59-MvU" secondAttribute="top" constant="3" id="nM1-zK-PRF"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="315" height="279"/>
+            <connections>
+                <outlet property="buyButton" destination="uyV-T2-4Zp" id="qJC-Dv-xlR"/>
+                <outlet property="photoView" destination="7ad-rk-u4X" id="Alf-7F-XTg"/>
+                <outlet property="statusButton" destination="3IX-EZ-s0F" id="p3U-FH-0oH"/>
+            </connections>
+            <point key="canvasLocation" x="202.17391304347828" y="198.54910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

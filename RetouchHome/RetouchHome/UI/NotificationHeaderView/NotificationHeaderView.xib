@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NotificationHeaderView" id="fNr-sJ-NqT" customClass="NotificationHeaderView" customModule="RetouchHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-fO-hnw" customClass="NotificationView" customModule="RetouchHome" customModuleProvider="target">
+                    <rect key="frame" x="16" y="16" width="382" height="112"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="112" id="0dS-Iv-U7g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bzg-fO-hnw" secondAttribute="trailing" constant="16" id="I0l-OW-sxS"/>
+                <constraint firstItem="bzg-fO-hnw" firstAttribute="leading" secondItem="fNr-sJ-NqT" secondAttribute="leading" constant="16" id="NPH-47-IWJ"/>
+                <constraint firstAttribute="bottom" secondItem="bzg-fO-hnw" secondAttribute="bottom" constant="16" id="bci-XF-yas"/>
+                <constraint firstItem="bzg-fO-hnw" firstAttribute="top" secondItem="fNr-sJ-NqT" secondAttribute="top" constant="16" id="sLJ-O3-pFf"/>
+            </constraints>
+            <connections>
+                <outlet property="notificationView" destination="bzg-fO-hnw" id="SqT-VZ-GCi"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="21.428571428571427"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

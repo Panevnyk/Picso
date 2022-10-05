@@ -1,0 +1,40 @@
+//
+//  PhotoGalleryView.swift
+//  RetouchCommon
+//
+//  Created by Vladyslav Panevnyk on 19.09.2022.
+//
+
+import SwiftUI
+import Photos
+
+public struct PhotoGalleryView: View {
+    private static let spacing: CGFloat = 2
+
+    private let assets: PHFetchResult<PHAsset>
+
+    private let columns = [
+        GridItem(spacing: PhotoGalleryView.spacing),
+        GridItem(spacing: PhotoGalleryView.spacing),
+        GridItem(spacing: PhotoGalleryView.spacing)
+    ]
+
+    public init(assets: PHFetchResult<PHAsset>) {
+        self.assets = assets
+    }
+
+    public var body: some View {
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: PhotoGalleryView.spacing) {
+                ForEach(0 ..< assets.count, id: \.self) { index in
+                    AssetImage(asset: assets[index],
+                               index: index,
+                               targetSize: CGSize(width: 150, height: 150),
+                               completionHandler: nil)
+                        .aspectRatio(1, contentMode: .fit)
+                }
+            }
+        }
+        .padding([.all], PhotoGalleryView.spacing)
+    }
+}
