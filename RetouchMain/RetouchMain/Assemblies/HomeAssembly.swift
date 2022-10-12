@@ -57,18 +57,12 @@ final class HomeHistoryAssembly {
 
 final class HomeGalleryAssembly {
     var viewController: HomeGalleryViewHosting
+    var viewModel: HomeGalleryViewModel
 
     init(serviceFactory: ServiceFactoryProtocol) {
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
-
-//        let storyboard = UIStoryboard(name: "Gallery", bundle: Bundle.home)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeGalleryViewController") as! HomeGalleryViewController
-//        viewController.dataLoader = serviceFactory.makeDataLoader()
-//        viewController.phImageLoader = serviceFactory.makePHImageLoader()
-//        viewController.assets = allPhotos
-//        viewController.expandableTitle = "All photos"
 
         let viewModel = HomeGalleryViewModel(dataLoader: serviceFactory.makeDataLoader(),
                                              phImageLoader: serviceFactory.makePHImageLoader(),
@@ -79,6 +73,7 @@ final class HomeGalleryAssembly {
         let viewController = HomeGalleryViewHosting(rootView: view)
 
         self.viewController = viewController
+        self.viewModel = viewModel
     }
 }
 

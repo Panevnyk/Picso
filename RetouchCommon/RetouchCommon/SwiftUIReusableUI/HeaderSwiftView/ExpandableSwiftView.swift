@@ -9,17 +9,17 @@ import SwiftUI
 
 public struct ExpandableSwiftView: View {
     private var title: String
+    private var showDetail: Binding<Bool>
 
-    @State private var showDetail = false
-
-    init?(title: String?) {
-        guard let title = title else { return nil }
+    init?(title: String?, showDetail: Binding<Bool>?) {
+        guard let title = title, let showDetail = showDetail else { return nil }
         self.title = title
+        self.showDetail = showDetail
     }
 
     public var body: some View {
         Button {
-            showDetail = !showDetail
+            showDetail.wrappedValue.toggle()
         } label: {
             HStack(spacing: 6) {
                 Text(title)
@@ -27,15 +27,9 @@ public struct ExpandableSwiftView: View {
                     .foregroundColor(.black)
 
                 Image("icDownArrowBlack", bundle: .common)
-                    .rotationEffect(.degrees(showDetail ? 180 : 0))
-                    .animation(.easeInOut, value: showDetail)
+                    .rotationEffect(.degrees(showDetail.wrappedValue ? 180 : 0))
+                    .animation(.easeInOut, value: showDetail.wrappedValue)
             }
         }
-    }
-}
-
-struct ExpandableSwiftView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpandableSwiftView(title: "Example")
     }
 }

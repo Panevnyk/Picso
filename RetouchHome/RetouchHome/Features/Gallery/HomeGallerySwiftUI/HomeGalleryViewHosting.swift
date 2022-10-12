@@ -16,21 +16,11 @@ public protocol HomeGalleryCoordinatorDelegate: BaseCoordinatorDelegate, BaseBal
     func didSelectCamera(from viewController: HomeGalleryViewController)
 }
 
-public class HomeGalleryViewHosting: UIHostingController<HomeGalleryView> {
+public class HomeGalleryViewHosting: HostingViewControllerWithoutNavBar<HomeGalleryView> {
     // MARK: - Properties
     // Data
     public var isBackHidden = true
 
     // Delegates
     public weak var coordinatorDelegate: HomeGalleryCoordinatorDelegate?
-
-    // MARK: - Public methods
-    public func didSelectAlbum(assets: PHFetchResult<PHAsset>, title: String) {
-//        self.assets = assets
-//        self.expandableTitle = title
-//
-//        headerView.closeExpandableView()
-//        reloadData()
-//        updateHeaderView()
-    }
 }

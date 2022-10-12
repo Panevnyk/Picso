@@ -686,6 +686,7 @@
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = RetouchMain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -714,6 +715,7 @@
 				DEVELOPMENT_TEAM = G6KD9UARPF;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = RetouchMain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

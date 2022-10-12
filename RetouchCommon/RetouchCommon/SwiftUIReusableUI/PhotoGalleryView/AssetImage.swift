@@ -11,7 +11,7 @@ import Photos
 public struct AssetImage: View {
     private var viewModel: AssetImageViewModel
 
-    public init(asset: PHAsset,
+    public init(asset: PHAsset?,
                 index: Int,
                 targetSize: CGSize,
                 completionHandler: ((Bool) -> Void)?) {

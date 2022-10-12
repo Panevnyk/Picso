@@ -9,10 +9,16 @@ import Combine
 import Photos
 import RetouchCommon
 
+public protocol HomeGalleryViewCoordinatorDelegate: AnyObject {
+    func didSelectPhoto(asset: PHAsset)
+    func didSelectCamera()
+}
+
 public protocol HomeGalleryViewModelProtocol: AnyObject {
     var assets: PHFetchResult<PHAsset> { get }
     var expandableTitle: String? { get }
     var isBackHidden: Bool { get }
+    var expandableShowDetail: Bool { get }
 
     func updateList()
 }
@@ -25,6 +31,11 @@ public class HomeGalleryViewModel: NSObject, ObservableObject, HomeGalleryViewMo
     @Published public var assets: PHFetchResult<PHAsset>
     @Published public var expandableTitle: String?
     @Published public var isBackHidden: Bool
+    @Published public var expandableShowDetail = false
+
+    private var isViewAppeared = false
+
+    public weak var coordinatorDelegate: HomeGalleryViewCoordinatorDelegate?
 
     // MARK: - Inits
     public init(dataLoader: DataLoaderProtocol,
@@ -43,9 +54,35 @@ public class HomeGalleryViewModel: NSObject, ObservableObject, HomeGalleryViewMo
         PHPhotoLibrary.shared().register(self)
     }
 
+    // MARK: - Deinit
+    deinit {
+        PHPhotoLibrary.shared().unregisterChangeObserver(self)
+    }
+
     // MARK: - Public
+    public func viewOnAppear() {
+        guard !isViewAppeared else { return }
+        isViewAppeared = true
+
+        AnalyticsService.logScreen(.homeGallery)
+    }
+
     public func updateList() {
         dataLoader.loadData(completion: nil)
+    }
+
+    public func didSelectAlbum(assets: PHFetchResult<PHAsset>, title: String) {
+        self.assets = assets
+        expandableTitle = title
+        expandableShowDetail = false
+    }
+
+    public func didSelectPhoto(asset: PHAsset) {
+        coordinatorDelegate?.didSelectPhoto(asset: asset)
+    }
+
+    public func didSelectCamera() {
+        coordinatorDelegate?.didSelectCamera()
     }
 }
 

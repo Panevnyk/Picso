@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32409CFC28EDC05300C65C13 /* PopupView.swift */; };
+		32D1F02D28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */; };
 		32DDCC8828D8ABF400036CF0 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDCC8728D8ABF400036CF0 /* PhotoGalleryView.swift */; };
 		32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDCC8928D8B03900036CF0 /* AssetImage.swift */; };
 		32F18E3228D61949009DF777 /* SwiftUIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E2F28D61948009DF777 /* SwiftUIFont+Style.swift */; };
@@ -203,6 +205,8 @@
 
 /* Begin PBXFileReference section */
 		09236B6C1EBD486D5431DC4F /* Pods-RetouchMain-RetouchCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetouchMain-RetouchCommon.debug.xcconfig"; path = "Target Support Files/Pods-RetouchMain-RetouchCommon/Pods-RetouchMain-RetouchCommon.debug.xcconfig"; sourceTree = "<group>"; };
+		32409CFC28EDC05300C65C13 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewControllerWithoutNavBar.swift; sourceTree = "<group>"; };
 		32DDCC8728D8ABF400036CF0 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		32DDCC8928D8B03900036CF0 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
 		32F18E2928D61948009DF777 /* View+IsHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
@@ -455,6 +459,22 @@
 			path = BackSwiftButton;
 			sourceTree = "<group>";
 		};
+		32409CFB28EDC04100C65C13 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				32409CFC28EDC05300C65C13 /* PopupView.swift */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
+		32D1F02B28F57CC5003B1849 /* HostingViewControllerWithoutNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */,
+			);
+			path = HostingViewControllerWithoutNavBar;
+			sourceTree = "<group>";
+		};
 		32F18E1B28D61948009DF777 /* SwiftUIExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +513,8 @@
 		32F18E4028D619A1009DF777 /* SwiftUIReusableUI */ = {
 			isa = PBXGroup;
 			children = (
+				32D1F02B28F57CC5003B1849 /* HostingViewControllerWithoutNavBar */,
+				32409CFB28EDC04100C65C13 /* PopupView */,
 				32409CF828EDA4B300C65C13 /* HeaderSwiftView */,
 				32F18E5128D61DF4009DF777 /* BalanceSwiftView */,
 				32409CFA28EDA4DC00C65C13 /* BackSwiftButton */,
@@ -1699,6 +1721,7 @@
 				91EF681C25E6910900253BFC /* BuyView.swift in Sources */,
 				32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */,
 				91F47C7C25D2D8D3003DF40A /* RestApiConstants.swift in Sources */,
+				32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */,
 				91EE320B26204BF20069327F /* GemsParameters.swift in Sources */,
 				913833C225DD39CB001E3DBD /* CameraButton.swift in Sources */,
 				D13CDE6B263ACE9B000FD01B /* RatingView.swift in Sources */,
@@ -1716,6 +1739,7 @@
 				D10E201A268B3A1500811CDB /* AnalyticsService.swift in Sources */,
 				91B1E66125D80A5E000E1486 /* ImageInfoContainerView.swift in Sources */,
 				91B1E65625D80938000E1486 /* BeforeAfterImagePresentableView.swift in Sources */,
+				32D1F02D28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift in Sources */,
 				91F47C5E25D2D8D3003DF40A /* DoubleFormatter.swift in Sources */,
 				D1B105AB26E4B54B000DA1C6 /* DeviceHelper.swift in Sources */,
 				91B1E69225D84849000E1486 /* PriceView.swift in Sources */,
@@ -1799,7 +1823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1857,7 +1881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

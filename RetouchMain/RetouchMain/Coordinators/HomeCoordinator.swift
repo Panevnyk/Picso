@@ -64,7 +64,7 @@ extension HomeCoordinator: HomeCoordinatorDelegate {
 
     public func setGallery(from viewController: HomeViewController){
         let homeGalleryAssembly = HomeGalleryAssembly(serviceFactory: serviceFactory)
-        homeGalleryAssembly.viewController.coordinatorDelegate = self
+        homeGalleryAssembly.viewModel.coordinatorDelegate = self
         homeGalleryViewController = homeGalleryAssembly.viewController
 
         setChildController(homeGalleryAssembly.viewController, to: viewController)
@@ -80,9 +80,9 @@ extension HomeCoordinator: HomeCoordinatorDelegate {
     }
 }
 
-// MARK: - HomeGalleryCoordinatorDelegate
-extension HomeCoordinator: HomeGalleryCoordinatorDelegate {
-    public func didSelectPhoto(asset: PHAsset, from viewController: UIViewController) {
+// MARK: - HomeGalleryViewCoordinatorDelegate
+extension HomeCoordinator: HomeGalleryViewCoordinatorDelegate {
+    public func didSelectPhoto(asset: PHAsset) {
         let photoViewModel = homeViewController!.viewModel.makePhotoViewModel(asset: asset)
         let photoAssembly = PhotoAssembly(
             serviceFactory: serviceFactory,
@@ -92,7 +92,7 @@ extension HomeCoordinator: HomeGalleryCoordinatorDelegate {
 
         navigationController.pushViewController(photoAssembly.viewController, animated: true)
     }
-    
+
     public func didSelectPhoto(image: UIImage, from viewController: UIViewController) {
         let photoViewModel = homeViewController!.viewModel.makePhotoViewModel(image: image)
         let photoAssembly = PhotoAssembly(
@@ -104,28 +104,12 @@ extension HomeCoordinator: HomeGalleryCoordinatorDelegate {
         navigationController.pushViewController(photoAssembly.viewController, animated: true)
     }
 
-    public func makeAlbumViewController(from viewController: HomeGalleryViewController) -> AlbumCollectionViewController {
-        let albumAssembly = AlbumAssembly(serviceFactory: serviceFactory)
-        albumAssembly.viewController.coordinatorDelegate = self
-
-        albumCollectionViewController = albumAssembly.viewController
-
-        return albumAssembly.viewController
-    }
-
     public func didSelectBackAction() {
         navigationController.popViewController(animated: true)
     }
 
-    public func didSelectCamera(from viewController: HomeGalleryViewController) {
-        presentCamera(from: viewController)
-    }
-}
-
-// MARK: - AlbumCollectionCoordinatorDelegate
-extension HomeCoordinator: AlbumCollectionCoordinatorDelegate {
-    public func didSelectAlbum(assets: PHFetchResult<PHAsset>, title: String) {
-        homeGalleryViewController?.didSelectAlbum(assets: assets, title: title)
+    public func didSelectCamera() {
+        presentCamera(from: navigationController)
     }
 }
 
@@ -161,8 +145,8 @@ extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
             guard let self = self else { return }
             if isAuthorized {
                 let homeGalleryAssembly = HomeGalleryAssembly(serviceFactory: self.serviceFactory)
-                homeGalleryAssembly.viewController.coordinatorDelegate = self
-                homeGalleryAssembly.viewController.isBackHidden = false
+                homeGalleryAssembly.viewModel.coordinatorDelegate = self
+                homeGalleryAssembly.viewModel.isBackHidden = false
                 self.homeGalleryViewController = homeGalleryAssembly.viewController
 
                 self.navigationController.pushViewController(homeGalleryAssembly.viewController, animated: true)

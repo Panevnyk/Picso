@@ -10,13 +10,16 @@ import SwiftUI
 public struct HeaderSwiftView: View {
     public var title: String
     public var expandableTitle: String?
+    public var expandableShowDetail: Binding<Bool>?
     public var isBackButtonHidden: Bool
 
     public init(title: String = "",
                 expandableTitle: String? = nil,
+                expandableShowDetail: Binding<Bool>? = nil,
                 isBackButtonHidden: Bool = true) {
         self.title = title
         self.expandableTitle = expandableTitle
+        self.expandableShowDetail = expandableShowDetail
         self.isBackButtonHidden = isBackButtonHidden
     }
 
@@ -34,7 +37,7 @@ public struct HeaderSwiftView: View {
 
                     Spacer()
 
-                    ExpandableSwiftView(title: expandableTitle)
+                    ExpandableSwiftView(title: expandableTitle, showDetail: expandableShowDetail)
 
                     Spacer()
 

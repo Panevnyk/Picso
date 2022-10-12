@@ -12,6 +12,7 @@ public struct PhotoGalleryView: View {
     private static let spacing: CGFloat = 2
 
     private let assets: PHFetchResult<PHAsset>
+    private var action: (_ asset: PHAsset) -> Void
 
     private let columns = [
         GridItem(spacing: PhotoGalleryView.spacing),
@@ -19,8 +20,10 @@ public struct PhotoGalleryView: View {
         GridItem(spacing: PhotoGalleryView.spacing)
     ]
 
-    public init(assets: PHFetchResult<PHAsset>) {
+    public init(assets: PHFetchResult<PHAsset>,
+                action: @escaping (_ asset: PHAsset) -> Void) {
         self.assets = assets
+        self.action = action
     }
 
     public var body: some View {
@@ -32,6 +35,9 @@ public struct PhotoGalleryView: View {
                                targetSize: CGSize(width: 150, height: 150),
                                completionHandler: nil)
                         .aspectRatio(1, contentMode: .fit)
+                        .onTapGesture {
+                            action(assets[index])
+                        }
                 }
             }
         }
