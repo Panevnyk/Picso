@@ -78,7 +78,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
     public func presentGallery() {
-        guard (childViewController as? HomeGalleryViewController) == nil else { return }
+        guard (childViewController as? HomeGalleryViewHosting) == nil else { return }
 
         viewModel.requestPhotosAuthorization { [weak self] (isAuthorized) in
             guard let self = self else { return }

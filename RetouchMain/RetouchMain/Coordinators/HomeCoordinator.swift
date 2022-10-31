@@ -21,8 +21,7 @@ final class HomeCoordinator {
     private weak var homeViewController: HomeViewController?
     private weak var homeHistoryViewController: HomeHistoryViewController?
     private weak var homeGalleryViewController: HomeGalleryViewHosting?
-    private weak var photoViewController: PhotoViewController?
-    private weak var albumCollectionViewController: AlbumCollectionViewController?
+    private weak var photoViewController: PhotoGalleryViewHosting?
     private weak var retouchingPhotoViewController: RetouchingPhotoViewController?
     private weak var balanceViewController: BalanceViewController?
     private weak var orderDetailViewController: OrderDetailViewController?
@@ -52,10 +51,8 @@ final class HomeCoordinator {
 // MARK: - HomeCoordinatorDelegate
 extension HomeCoordinator: HomeCoordinatorDelegate {
     public func setHomeHistory(from viewController: HomeViewController) {
-        let homeHistoryViewModel = viewController.viewModel.makeHomeHistoryViewModel()
         let homeHistoryAssembly = HomeHistoryAssembly(
-            serviceFactory: serviceFactory,
-            homeHistoryViewModel: homeHistoryViewModel)
+            serviceFactory: serviceFactory)
         homeHistoryAssembly.viewController.coordinatorDelegate = self
         homeHistoryViewController = homeHistoryAssembly.viewController
 
@@ -70,47 +67,60 @@ extension HomeCoordinator: HomeCoordinatorDelegate {
         setChildController(homeGalleryAssembly.viewController, to: viewController)
     }
 
+    private func setChildController(_ viewController: UIViewController, to parentViewController: HomeViewController) {
+        parentViewController.setChildController(viewController)
+    }
+}
+
+// MARK: - BalanceViewCoordinatorDelegate
+extension HomeCoordinator: BaseBalanceCoordinatorDelegate {
     public func didSelectBalanceAction() {
         let balanceViewController = makeBalanceViewController()
         navigationController.pushViewController(balanceViewController, animated: true)
     }
+}
 
-    private func setChildController(_ viewController: UIViewController, to parentViewController: HomeViewController) {
-        parentViewController.setChildController(viewController)
+// MARK: - BaseCoordinatorDelegate
+extension HomeCoordinator: BaseCoordinatorDelegate {
+    public func didSelectBackAction() {
+        navigationController.popViewController(animated: true)
     }
 }
 
 // MARK: - HomeGalleryViewCoordinatorDelegate
 extension HomeCoordinator: HomeGalleryViewCoordinatorDelegate {
     public func didSelectPhoto(asset: PHAsset) {
-        let photoViewModel = homeViewController!.viewModel.makePhotoViewModel(asset: asset)
-        let photoAssembly = PhotoAssembly(
+        let retouchGroups = homeViewController!.viewModel.getRetouchGroups()
+        let photoAssembly = PhotoGalleryAssembly(
             serviceFactory: serviceFactory,
-            photoViewModel: photoViewModel)
-        photoAssembly.viewController.coordinatorDelegate = self
+            retouchGroups: retouchGroups,
+            asset: asset)
+        photoAssembly.viewModel.coordinatorDelegate = self
         photoViewController = photoAssembly.viewController
 
         navigationController.pushViewController(photoAssembly.viewController, animated: true)
     }
 
     public func didSelectPhoto(image: UIImage, from viewController: UIViewController) {
-        let photoViewModel = homeViewController!.viewModel.makePhotoViewModel(image: image)
-        let photoAssembly = PhotoAssembly(
+        let retouchGroups = homeViewController!.viewModel.getRetouchGroups()
+        let photoAssembly = PhotoGalleryAssembly(
             serviceFactory: serviceFactory,
-            photoViewModel: photoViewModel)
-        photoAssembly.viewController.coordinatorDelegate = self
+            retouchGroups: retouchGroups,
+            image: image)
+        photoAssembly.viewModel.coordinatorDelegate = self
         photoViewController = photoAssembly.viewController
 
         navigationController.pushViewController(photoAssembly.viewController, animated: true)
     }
 
-    public func didSelectBackAction() {
-        navigationController.popViewController(animated: true)
-    }
-
     public func didSelectCamera() {
         presentCamera(from: navigationController)
     }
+}
+
+// MARK: - PhotoGalleryViewCoordinatorDelegate
+extension HomeCoordinator: PhotoGalleryViewCoordinatorDelegate {
+
 }
 
 // MARK: - PhotoCoordinatorDelegate

@@ -22,11 +22,8 @@ public protocol HomeViewModelProtocol {
 
     func loadData()
     func getOrdersCount() -> Int
+    func getRetouchGroups() -> [RetouchGroup]
     func requestPhotosAuthorization(completion: ((_ isAuthorized: Bool) -> Void)?)
-
-    func makeHomeHistoryViewModel() -> HomeHistoryViewModelProtocol
-    func makePhotoViewModel(asset: PHAsset) -> PhotoViewModelProtocol
-    func makePhotoViewModel(image: UIImage) -> PhotoViewModelProtocol
 }
 
 public final class HomeViewModel: HomeViewModelProtocol {
@@ -34,13 +31,10 @@ public final class HomeViewModel: HomeViewModelProtocol {
     // Boundaries
     private let dataLoader: DataLoaderProtocol
     private let ordersLoader: OrdersLoaderProtocol
-    private let phImageLoader: PHImageLoaderProtocol
     private let retouchGroupsLoader: RetouchGroupsLoaderProtocol
     private let phPhotoLibraryPresenter: PHPhotoLibraryPresenterProtocol
     private let reachabilityService: ReachabilityServiceProtocol
-    private var iapService: IAPServiceProtocol
     private var freeGemCreditCountService: FreeGemCreditCountServiceProtocol
-    private let savePhotoInfoService: SavePhotoInfoServiceProtocol
 
     // Data
     private var isInitialDataLoaded = false
@@ -56,24 +50,18 @@ public final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Inits
     public init(dataLoader: DataLoaderProtocol,
                 ordersLoader: OrdersLoaderProtocol,
-                phImageLoader: PHImageLoaderProtocol,
                 retouchGroupsLoader: RetouchGroupsLoaderProtocol,
                 phPhotoLibraryPresenter: PHPhotoLibraryPresenterProtocol,
                 reachabilityService: ReachabilityServiceProtocol,
-                iapService: IAPServiceProtocol,
                 freeGemCreditCountService: FreeGemCreditCountServiceProtocol,
-                savePhotoInfoService: SavePhotoInfoServiceProtocol,
                 delegate: HomeViewModelDelegate)
     {
         self.dataLoader = dataLoader
         self.ordersLoader = ordersLoader
-        self.phImageLoader = phImageLoader
         self.retouchGroupsLoader = retouchGroupsLoader
         self.phPhotoLibraryPresenter = phPhotoLibraryPresenter
         self.reachabilityService = reachabilityService
-        self.iapService = iapService
         self.freeGemCreditCountService = freeGemCreditCountService
-        self.savePhotoInfoService = savePhotoInfoService
         self.delegate = delegate
         self.isNetworkConnected = reachabilityService.isNetworkConnected.value
 
@@ -92,6 +80,10 @@ public final class HomeViewModel: HomeViewModelProtocol {
         return orders.count
     }
 
+    public func getRetouchGroups() -> [RetouchGroup] {
+        return retouchGroups
+    }
+
     public func requestPhotosAuthorization(completion: ((_ isAuthorized: Bool) -> Void)?) {
         phPhotoLibraryPresenter.requestPhotosAuthorization(completion: completion)
     }
@@ -100,34 +92,6 @@ public final class HomeViewModel: HomeViewModelProtocol {
         return (UserData.shared.user.freeGemCreditCount ?? 0) > 0
         && ordersLoader.ordersPublisher.value.count == 0
         && freeGemCreditCountService.needToShowFreeGemsCountAlert
-    }
-}
-
-// MARK: - ViewModels factory
-extension HomeViewModel {
-    public func makeHomeHistoryViewModel() -> HomeHistoryViewModelProtocol {
-        return HomeHistoryViewModel(dataLoader: dataLoader,
-                                    ordersLoader: ordersLoader,
-                                    retouchGroupsLoader: retouchGroupsLoader,
-                                    savePhotoInfoService: savePhotoInfoService)
-    }
-
-    public func makePhotoViewModel(asset: PHAsset) -> PhotoViewModelProtocol {
-        return PhotoViewModel(ordersLoader: ordersLoader,
-                              phImageLoader: phImageLoader,
-                              retouchGroups: retouchGroups,
-                              iapService: iapService,
-                              freeGemCreditCountService: freeGemCreditCountService,
-                              asset: asset)
-    }
-    
-    public func makePhotoViewModel(image: UIImage) -> PhotoViewModelProtocol {
-        return PhotoViewModel(ordersLoader: ordersLoader,
-                              phImageLoader: phImageLoader,
-                              retouchGroups: retouchGroups,
-                              iapService: iapService,
-                              freeGemCreditCountService: freeGemCreditCountService,
-                              image: image)
     }
 }
 

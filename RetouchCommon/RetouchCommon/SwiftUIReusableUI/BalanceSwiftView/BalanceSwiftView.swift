@@ -9,14 +9,16 @@ import SwiftUI
 
 public struct BalanceSwiftView: View {
     @ObservedObject public var viewModel: BalanceSwiftViewModel
+    private var action: (() -> Void)?
 
-    public init() {
+    public init(action: (() -> Void)?) {
+        self.action = action
         self.viewModel = BalanceSwiftViewModel()
     }
 
     public var body: some View {
         Button {
-            //
+            action?()
         } label: {
             ZStack(alignment: .trailing) {
                 HStack(spacing: 6) {
@@ -41,6 +43,6 @@ public struct BalanceSwiftView: View {
 
 struct BalanceSwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceSwiftView()
+        BalanceSwiftView(action: nil)
     }
 }

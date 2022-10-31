@@ -22,13 +22,10 @@ final class HomeAssembly {
         let viewModel = HomeViewModel(
             dataLoader: serviceFactory.makeDataLoader(),
             ordersLoader: serviceFactory.makeOrdersLoader(),
-            phImageLoader: serviceFactory.makePHImageLoader(),
             retouchGroupsLoader: serviceFactory.makeRetouchGroupsLoader(),
             phPhotoLibraryPresenter: serviceFactory.makePHPhotoLibraryPresenter(),
             reachabilityService: serviceFactory.makeReachabilityService(),
-            iapService: serviceFactory.makeIAPService(),
             freeGemCreditCountService: serviceFactory.makeFreeGemCreditCountService(),
-            savePhotoInfoService: serviceFactory.makeSavePhotoInfoService(),
             delegate: viewController
         )
         viewController.viewModel = viewModel
@@ -42,9 +39,12 @@ final class HomeHistoryAssembly {
     var viewController: HomeHistoryViewController
     var viewModel: HomeHistoryViewModelProtocol
 
-    init(serviceFactory: ServiceFactoryProtocol,
-         homeHistoryViewModel: HomeHistoryViewModelProtocol) {
-        var viewModel = homeHistoryViewModel
+    init(serviceFactory: ServiceFactoryProtocol) {
+        let viewModel = HomeHistoryViewModel(
+            dataLoader: serviceFactory.makeDataLoader(),
+            ordersLoader: serviceFactory.makeOrdersLoader(),
+            retouchGroupsLoader: serviceFactory.makeRetouchGroupsLoader(),
+            savePhotoInfoService: serviceFactory.makeSavePhotoInfoService())
         let storyboard = UIStoryboard(name: "Home", bundle: Bundle.home)
         let viewController = storyboard.instantiateViewController(withIdentifier: "HomeHistoryViewController") as! HomeHistoryViewController
         viewController.viewModel = viewModel
@@ -77,29 +77,44 @@ final class HomeGalleryAssembly {
     }
 }
 
-final class PhotoAssembly {
-    var viewController: PhotoViewController
+final class PhotoGalleryAssembly {
+    var viewController: PhotoGalleryViewHosting
+    var viewModel: PhotoGalleryViewModel
 
-    init(serviceFactory: ServiceFactoryProtocol,
-         photoViewModel: PhotoViewModelProtocol) {
-        let storyboard = UIStoryboard(name: "Gallery", bundle: Bundle.home)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
-        var viewModel = photoViewModel
-        viewController.viewModel = viewModel
-        viewModel.delegate = viewController
-
-        self.viewController = viewController
+    convenience init(serviceFactory: ServiceFactoryProtocol,
+                     retouchGroups: [RetouchGroup],
+                     image: UIImage?) {
+        let viewModel = PhotoGalleryViewModel(
+            ordersLoader: serviceFactory.makeOrdersLoader(),
+            phImageLoader: serviceFactory.makePHImageLoader(),
+            retouchGroups: retouchGroups,
+            iapService: serviceFactory.makeIAPService(),
+            freeGemCreditCountService: serviceFactory.makeFreeGemCreditCountService(),
+            image: image)
+        self.init(serviceFactory: serviceFactory, photoViewModel: viewModel)
     }
-}
 
-final class AlbumAssembly {
-    var viewController: AlbumCollectionViewController
+    convenience init(serviceFactory: ServiceFactoryProtocol,
+                     retouchGroups: [RetouchGroup],
+                     asset: PHAsset) {
+        let viewModel = AssetPhotoGalleryViewModel(
+            ordersLoader: serviceFactory.makeOrdersLoader(),
+            phImageLoader: serviceFactory.makePHImageLoader(),
+            retouchGroups: retouchGroups,
+            iapService: serviceFactory.makeIAPService(),
+            freeGemCreditCountService: serviceFactory.makeFreeGemCreditCountService(),
+            asset: asset)
+        self.init(serviceFactory: serviceFactory, photoViewModel: viewModel)
+    }
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let storyboard = UIStoryboard(name: "Gallery", bundle: Bundle.home)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "AlbumCollectionViewController") as! AlbumCollectionViewController
+    private init(serviceFactory: ServiceFactoryProtocol,
+                 photoViewModel: PhotoGalleryViewModel) {
+        let view = PhotoGalleryView(viewModel: photoViewModel)
+        let viewController = PhotoGalleryViewHosting(rootView: view)
+        viewController.hidesBottomBarWhenPushed = true
 
         self.viewController = viewController
+        self.viewModel = photoViewModel
     }
 }
 

@@ -8,7 +8,7 @@ target 'RetouchMain' do
   # ---- General
 
   # Facebook
-  pod 'FBSDKCoreKit'
+#  pod 'FBSDKCoreKit'
   # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
@@ -90,7 +90,7 @@ target 'RetouchMain' do
     workspace '../Retouch.xcworkspace'
 
     # Facebook
-    pod 'FBSDKCoreKit'
+#    pod 'FBSDKCoreKit'
 #    # Firebase
 #    pod 'Firebase/Core'
 #    pod 'Firebase/Analytics'

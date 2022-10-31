@@ -10,6 +10,7 @@ import UIKit
 
 open class HostingViewControllerWithoutNavBar<Content>: UIHostingController<AnyView> where Content: View {
     // MARK: - Properties
+
     private var hidesBottomBarOnPush: Bool
 
     // MARK: - Inits

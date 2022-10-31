@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIImage {
-    func scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
+    func scalePreservingAspectRatio(targetSize: CGSize = UIScreen.main.bounds.size) -> UIImage {
         // Determine the scale factor that preserves aspect ratio
         let widthRatio = targetSize.width / size.width
         let heightRatio = targetSize.height / size.height

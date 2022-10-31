@@ -31,6 +31,7 @@ final class AppCoordinator {
 
         setupAppearance()
         navigationController.navigationBar.isHidden = true
+        navigationController.isNavigationBarHidden = true
         subscribe()
 
         window.rootViewController = navigationController

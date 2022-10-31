@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 public final class PresentableRetouchGroup {
     public var id: String = ""
@@ -39,12 +40,10 @@ extension PresentableRetouchGroup {
         if isOpened {
             if !selectedRetouchTags.contains(where: { $0.id == retouchTag.id }) {
                 selectedRetouchTags.append(retouchTag)
-                print(selectedRetouchTags)
             }
         } else {
             if let selectedIndex = selectedRetouchTags.firstIndex(where: { $0.id == retouchTag.id }) {
                 selectedRetouchTags.remove(at: selectedIndex)
-                print(selectedRetouchTags)
             }
         }
     }
