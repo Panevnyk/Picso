@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        If you're tracking in-app purchases, you must initialize your transaction observer in application:didFinishLaunchingWithOptions: before initializing Firebase, or your observer may not receive all purchase notifications.
         serviceFactory.makeIAPService().getProducts(completion: nil)
-        
+
+        /*
         FirebaseOptions.defaultOptions()?.deepLinkURLScheme = Constants.deepLinkURLScheme
         FirebaseApp.configure()
         serviceFactory.makeRemoteConfigService().setup()
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AnalyticsService.setupUserID()
         
         registerForPushNotifications(application: application)
+         */
 
         return true
     }

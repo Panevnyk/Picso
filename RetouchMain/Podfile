@@ -7,8 +7,6 @@ target 'RetouchMain' do
 
   # ---- General
 
-  # Facebook
-#  pod 'FBSDKCoreKit'
   # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
@@ -89,13 +87,12 @@ target 'RetouchMain' do
     project '../RetouchCommon/RetouchCommon.xcodeproj'
     workspace '../Retouch.xcworkspace'
 
-    # Facebook
-#    pod 'FBSDKCoreKit'
-#    # Firebase
-#    pod 'Firebase/Core'
-#    pod 'Firebase/Analytics'
-#    pod 'Firebase/RemoteConfig'
-#    pod 'Firebase/Messaging'
+    # Firebase
+    pod 'Firebase/Core'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Crashlytics'
+    pod 'Firebase/RemoteConfig'
+    pod 'Firebase/Messaging'
     # Rx
     pod 'RxSwift'
     pod 'RxCocoa'
