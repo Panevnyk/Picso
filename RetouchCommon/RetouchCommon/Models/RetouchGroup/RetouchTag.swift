@@ -38,3 +38,14 @@ public final class RetouchTag: Decodable {
         tagDescription = (try? container.decode(String.self, forKey: .tagDescription)) ?? ""
     }
 }
+
+// MARK: - Equatable
+extension RetouchTag: Equatable {
+    public static func == (lhs: RetouchTag, rhs: RetouchTag) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.title == rhs.title &&
+        lhs.price == rhs.price &&
+        lhs.orderNumber == rhs.orderNumber &&
+        lhs.tagDescription == rhs.tagDescription
+    }
+}

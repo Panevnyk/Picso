@@ -9,13 +9,16 @@ import SwiftUI
 import Photos
 
 public struct AssetImage: View {
-    private var viewModel: AssetImageViewModel
+    @ObservedObject private var viewModel: AssetImageViewModel
+    private var tapGesture: (() -> Void)?
 
     public init(asset: PHAsset?,
                 index: Int,
                 targetSize: CGSize,
-                completionHandler: ((Bool) -> Void)?) {
+                completionHandler: ((Bool) -> Void)?,
+                onTapGesture tapGesture: (() -> Void)?) {
         self.viewModel = AssetImageViewModel()
+        self.tapGesture = tapGesture
         viewModel.fetchImageAsset(asset,
                                   index: index,
                                   targetSize: targetSize,
@@ -23,13 +26,16 @@ public struct AssetImage: View {
     }
 
     public var body: some View {
-        GeometryReader { proxy in
-            makeImage()
-                .resizable()
-                .scaledToFill()
-                .frame(width: proxy.size.width, height: proxy.size.height)
-                .clipped()
-        }
+        makeImage()
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .clipped()
+            .aspectRatio(1, contentMode: .fit)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                self.tapGesture?()
+            }
     }
 
     private func makeImage() -> Image {

@@ -29,6 +29,11 @@ public struct OrderButton: View {
             .cornerRadius(6)
         }
     }
+    
+    public func isAvailable(_ isAvailable: Bool) -> some View {
+        self.disabled(!isAvailable)
+            .opacity(isAvailable ? 1 : 0.6)
+    }
 }
 
 struct OrderButton_Previews: PreviewProvider {

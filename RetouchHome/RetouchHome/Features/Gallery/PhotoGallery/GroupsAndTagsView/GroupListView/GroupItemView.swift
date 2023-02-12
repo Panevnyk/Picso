@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 struct GroupItemView: View {
     var retouchGroup: PresentableRetouchGroup

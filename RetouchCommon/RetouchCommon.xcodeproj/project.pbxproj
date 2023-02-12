@@ -16,17 +16,7 @@
 		32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32409CFC28EDC05300C65C13 /* PopupView.swift */; };
 		32879A2F28FEC92C00F117AA /* PriceSwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A2E28FEC92C00F117AA /* PriceSwiftView.swift */; };
 		32879A3328FEEB8A00F117AA /* ScrollableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A3228FEEB8A00F117AA /* ScrollableImage.swift */; };
-		32879A382900173200F117AA /* GroupsAndTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A372900173200F117AA /* GroupsAndTagsView.swift */; };
-		32879A3A290037E400F117AA /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A39290037E400F117AA /* GroupListView.swift */; };
-		32879A3C290037FF00F117AA /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A3B290037FF00F117AA /* TagListView.swift */; };
-		32879A41290073CC00F117AA /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A40290073CC00F117AA /* GroupListViewModel.swift */; };
-		32879A43290073E600F117AA /* GroupItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A42290073E600F117AA /* GroupItemView.swift */; };
-		32879A462900740900F117AA /* TagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A452900740900F117AA /* TagListViewModel.swift */; };
-		32879A482900742000F117AA /* TagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A472900742000F117AA /* TagItemView.swift */; };
-		32879A4B2900744D00F117AA /* GroupsAndTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A4A2900744D00F117AA /* GroupsAndTagsViewModel.swift */; };
 		32B3DD0729029ED0002D5BBD /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD0629029ED0002D5BBD /* Triangle.swift */; };
-		32B3DD1C29099719002D5BBD /* TagDescriptionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD1A29099719002D5BBD /* TagDescriptionItemView.swift */; };
-		32B3DD1D29099719002D5BBD /* TagDescriptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD1B29099719002D5BBD /* TagDescriptionListView.swift */; };
 		32B3DD20290BCAB8002D5BBD /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD1F290BCAB8002D5BBD /* OrderButton.swift */; };
 		32D1F02D28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */; };
 		32DDCC8828D8ABF400036CF0 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDCC8728D8ABF400036CF0 /* GalleryView.swift */; };
@@ -272,17 +262,7 @@
 		32409CFC28EDC05300C65C13 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		32879A2E28FEC92C00F117AA /* PriceSwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSwiftView.swift; sourceTree = "<group>"; };
 		32879A3228FEEB8A00F117AA /* ScrollableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableImage.swift; sourceTree = "<group>"; };
-		32879A372900173200F117AA /* GroupsAndTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAndTagsView.swift; sourceTree = "<group>"; };
-		32879A39290037E400F117AA /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
-		32879A3B290037FF00F117AA /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
-		32879A40290073CC00F117AA /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
-		32879A42290073E600F117AA /* GroupItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupItemView.swift; sourceTree = "<group>"; };
-		32879A452900740900F117AA /* TagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewModel.swift; sourceTree = "<group>"; };
-		32879A472900742000F117AA /* TagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemView.swift; sourceTree = "<group>"; };
-		32879A4A2900744D00F117AA /* GroupsAndTagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAndTagsViewModel.swift; sourceTree = "<group>"; };
 		32B3DD0629029ED0002D5BBD /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
-		32B3DD1A29099719002D5BBD /* TagDescriptionItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDescriptionItemView.swift; sourceTree = "<group>"; };
-		32B3DD1B29099719002D5BBD /* TagDescriptionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDescriptionListView.swift; sourceTree = "<group>"; };
 		32B3DD1F290BCAB8002D5BBD /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewControllerWithoutNavBar.swift; sourceTree = "<group>"; };
 		32DDCC8728D8ABF400036CF0 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -592,54 +572,12 @@
 			path = ScrollableImage;
 			sourceTree = "<group>";
 		};
-		32879A362900172100F117AA /* GroupsAndTagsView */ = {
-			isa = PBXGroup;
-			children = (
-				32879A372900173200F117AA /* GroupsAndTagsView.swift */,
-				32879A4A2900744D00F117AA /* GroupsAndTagsViewModel.swift */,
-				32879A3F290073BE00F117AA /* GroupListView */,
-				32879A44290073FE00F117AA /* TagListView */,
-				32B3DD1929099719002D5BBD /* TagDescriptionListView */,
-			);
-			name = GroupsAndTagsView;
-			path = ../../../RetouchHome/RetouchHome/Features/Gallery/AlbumGallery/GroupsAndTagsView;
-			sourceTree = "<group>";
-		};
-		32879A3F290073BE00F117AA /* GroupListView */ = {
-			isa = PBXGroup;
-			children = (
-				32879A39290037E400F117AA /* GroupListView.swift */,
-				32879A40290073CC00F117AA /* GroupListViewModel.swift */,
-				32879A42290073E600F117AA /* GroupItemView.swift */,
-			);
-			path = GroupListView;
-			sourceTree = "<group>";
-		};
-		32879A44290073FE00F117AA /* TagListView */ = {
-			isa = PBXGroup;
-			children = (
-				32879A3B290037FF00F117AA /* TagListView.swift */,
-				32879A452900740900F117AA /* TagListViewModel.swift */,
-				32879A472900742000F117AA /* TagItemView.swift */,
-			);
-			path = TagListView;
-			sourceTree = "<group>";
-		};
 		32B3DD0529029EC2002D5BBD /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
 				32B3DD0629029ED0002D5BBD /* Triangle.swift */,
 			);
 			path = Triangle;
-			sourceTree = "<group>";
-		};
-		32B3DD1929099719002D5BBD /* TagDescriptionListView */ = {
-			isa = PBXGroup;
-			children = (
-				32B3DD1B29099719002D5BBD /* TagDescriptionListView.swift */,
-				32B3DD1A29099719002D5BBD /* TagDescriptionItemView.swift */,
-			);
-			path = TagDescriptionListView;
 			sourceTree = "<group>";
 		};
 		32B3DD1E290BCAAA002D5BBD /* OrderButton */ = {
@@ -698,7 +636,6 @@
 			children = (
 				32B3DD1E290BCAAA002D5BBD /* OrderButton */,
 				32B3DD0529029EC2002D5BBD /* Triangle */,
-				32879A362900172100F117AA /* GroupsAndTagsView */,
 				32879A3128FEEB7200F117AA /* ScrollableImage */,
 				32D1F02B28F57CC5003B1849 /* HostingViewControllerWithoutNavBar */,
 				32409CFB28EDC04100C65C13 /* PopupView */,
@@ -1781,7 +1718,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32879A41290073CC00F117AA /* GroupListViewModel.swift in Sources */,
 				91F47C7425D2D8D3003DF40A /* AlertHelper.swift in Sources */,
 				91CF92E125D56FBF000D7130 /* RetouchGroup.swift in Sources */,
 				914A361925F66A3800A2D506 /* ReversePurpleButton.swift in Sources */,
@@ -1819,7 +1755,6 @@
 				9159C30A2632D347003DCB4B /* CurrentUserLoader.swift in Sources */,
 				91CF929B25D53D6E000D7130 /* UIScrollView+ToBottom.swift in Sources */,
 				D1B7022E26930F6A0086C30F /* StoreKitService.swift in Sources */,
-				32879A43290073E600F117AA /* GroupItemView.swift in Sources */,
 				91CF92E525D57049000D7130 /* RetouchTag.swift in Sources */,
 				D14727D7279D9F1900D7E6B1 /* UIImageView+LoadByURL.swift in Sources */,
 				91F47C7A25D2D8D3003DF40A /* BaseCoordinatorDelegate.swift in Sources */,
@@ -1829,7 +1764,6 @@
 				91F47C8025D2D8D3003DF40A /* AuthRestApiMethods.swift in Sources */,
 				91F47C7325D2D8D3003DF40A /* DateHelper.swift in Sources */,
 				91F47C7E25D2D8D3003DF40A /* OrderRestApiMethods.swift in Sources */,
-				32879A462900740900F117AA /* TagListViewModel.swift in Sources */,
 				91F47C8B25D2D8D3003DF40A /* CustomRestApiError.swift in Sources */,
 				9112A81B260A390800042B65 /* UpdatePushNotificationTokenParameters.swift in Sources */,
 				D13CDE70263ACFC8000FD01B /* StarButton.swift in Sources */,
@@ -1866,7 +1800,6 @@
 				91B1E64725D804DA000E1486 /* ImagePresentableView.swift in Sources */,
 				91F47C5725D2D8D3003DF40A /* BaseCustomView.swift in Sources */,
 				91F47C4F25D2D8D3003DF40A /* SUTextField.swift in Sources */,
-				32879A382900173200F117AA /* GroupsAndTagsView.swift in Sources */,
 				91EF683F25E6953800253BFC /* ImageInfoContainerViewModel.swift in Sources */,
 				91E3C3DE261DE6F9004A7856 /* RTAlertAction.swift in Sources */,
 				D1D274AC2642CCD8009F08FC /* SmallRatingView.swift in Sources */,
@@ -1900,11 +1833,8 @@
 				91E3C3D8261DE652004A7856 /* RTAlertController.swift in Sources */,
 				91D186932630042E001849A1 /* BalanceInfoView.swift in Sources */,
 				D14594F52668E7F9000EE7E6 /* TriangleView.swift in Sources */,
-				32879A3A290037E400F117AA /* GroupListView.swift in Sources */,
 				D128B47726454F4200407B49 /* PushNotificationModel.swift in Sources */,
 				91F47C6525D2D8D3003DF40A /* DateOfBirthValidator.swift in Sources */,
-				32879A482900742000F117AA /* TagItemView.swift in Sources */,
-				32B3DD1D29099719002D5BBD /* TagDescriptionListView.swift in Sources */,
 				91F47C5B25D2D8D3003DF40A /* PercentFormatter.swift in Sources */,
 				913833B125DD1FDA001E3DBD /* PlaceholderView.swift in Sources */,
 				910483B725E931A5003DAA47 /* RetouchGroupRestApiMethods.swift in Sources */,
@@ -1920,12 +1850,10 @@
 				91EF681C25E6910900253BFC /* BuyView.swift in Sources */,
 				32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */,
 				91F47C7C25D2D8D3003DF40A /* RestApiConstants.swift in Sources */,
-				32B3DD1C29099719002D5BBD /* TagDescriptionItemView.swift in Sources */,
 				32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */,
 				91EE320B26204BF20069327F /* GemsParameters.swift in Sources */,
 				913833C225DD39CB001E3DBD /* CameraButton.swift in Sources */,
 				D13CDE6B263ACE9B000FD01B /* RatingView.swift in Sources */,
-				32879A4B2900744D00F117AA /* GroupsAndTagsViewModel.swift in Sources */,
 				91D1869B26302726001849A1 /* BeforeImage.swift in Sources */,
 				91BC4E1525E5327D00D25A09 /* SelectedRetouchGroup.swift in Sources */,
 				32F18E3728D61949009DF777 /* SwiftUIColor+Style.swift in Sources */,
@@ -1941,7 +1869,6 @@
 				91B1E66125D80A5E000E1486 /* ImageInfoContainerView.swift in Sources */,
 				91B1E65625D80938000E1486 /* BeforeAfterImagePresentableView.swift in Sources */,
 				32D1F02D28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift in Sources */,
-				32879A3C290037FF00F117AA /* TagListView.swift in Sources */,
 				91F47C5E25D2D8D3003DF40A /* DoubleFormatter.swift in Sources */,
 				D1B105AB26E4B54B000DA1C6 /* DeviceHelper.swift in Sources */,
 				91B1E69225D84849000E1486 /* PriceView.swift in Sources */,

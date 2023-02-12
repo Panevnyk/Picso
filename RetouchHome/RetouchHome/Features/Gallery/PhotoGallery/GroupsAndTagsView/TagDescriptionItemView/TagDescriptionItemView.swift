@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 public struct TagDescriptionItemView: View {
     public var title: String?
@@ -40,4 +41,3 @@ public struct TagDescriptionItemView: View {
         return "Please, describe what you would like to change"
     }
 }
-

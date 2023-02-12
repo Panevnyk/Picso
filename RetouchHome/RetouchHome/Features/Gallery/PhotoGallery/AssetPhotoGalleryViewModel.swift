@@ -32,7 +32,7 @@ public class AssetPhotoGalleryViewModel: PhotoGalleryViewModel {
         options.isNetworkAccessAllowed = true
         options.isSynchronous = true
 
-//        delegate?.showActivityIndicator()
+        ActivityIndicatorHelper.shared.show()
         DispatchQueue(label: "Fetch image", qos: DispatchQoS.userInteractive).async {
             self.phImageLoader.fetchImage(asset,
                                           targetSize: PHImageManagerMaximumSize,
@@ -40,7 +40,7 @@ public class AssetPhotoGalleryViewModel: PhotoGalleryViewModel {
                                           options: options)
             { [weak self] (image, info) in
                 DispatchQueue.main.async {
-//                    self?.delegate?.hideActivityIndicator()
+                    ActivityIndicatorHelper.shared.hide()
                     self?.image = image
                 }
             }

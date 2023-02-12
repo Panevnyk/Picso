@@ -69,7 +69,7 @@ public class EarnCreditsService: EarnCreditsServiceProtocol {
     // MARK: - Public
     public func getEarnCreditsModels() -> [EarnCreditsModel] {
         return [/*EarnCreditsModel(type: .viewVideoAd, isAvailable: true),*/
-                EarnCreditsModel(type: .leaveRatingOnAppStore, isAvailable: storeKitService.shouldRequestReview),
+//                EarnCreditsModel(type: .leaveRatingOnAppStore, isAvailable: storeKitService.shouldRequestReview),
                 EarnCreditsModel(type: .leaveCommentByURLOnAppStore, isAvailable: reviewByURLService.shouldRequestReview)/*,
                 EarnCreditsModel(type: .followUsOnInstagram, isAvailable: true),
                 EarnCreditsModel(type: .followUsOnFacebook, isAvailable: true)*/]

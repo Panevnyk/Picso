@@ -267,23 +267,6 @@ extension PhotoViewModel {
         }
     }
     
-    private func makeFirstRetouchingForFreeAttributedText() -> NSAttributedString {
-        let simpleAttributes: [NSAttributedString.Key: Any] =
-            [.foregroundColor: UIColor.kTextDarkGray, .font: UIFont.kPlainText]
-        let selectedAttributes: [NSAttributedString.Key: Any] =
-            [.foregroundColor: UIColor.kPurple, .font: UIFont.kPlainText]
-            
-
-        let firstString = NSMutableAttributedString(string: "Send your photo to our designers. You have ", attributes: simpleAttributes)
-        let secondString = NSAttributedString(string: "\(freeGemCreditCountService.firstOrderFreeGemsCount) free diamonds", attributes: selectedAttributes)
-        let thirdString = NSAttributedString(string: " for your first order.", attributes: simpleAttributes)
-
-        firstString.append(secondString)
-        firstString.append(thirdString)
-        
-        return firstString
-    }
-    
     public func isFirstOrderForFreeAvailabel() -> Bool {
         return (user.freeGemCreditCount ?? 0) > 0
         && (user.freeGemCreditCount ?? 0) == user.gemCount

@@ -120,21 +120,16 @@ extension HomeCoordinator: HomeGalleryViewCoordinatorDelegate {
 
 // MARK: - PhotoGalleryViewCoordinatorDelegate
 extension HomeCoordinator: PhotoGalleryViewCoordinatorDelegate {
-
-}
-
-// MARK: - PhotoCoordinatorDelegate
-extension HomeCoordinator: PhotoCoordinatorDelegate {
-    public func didSelectOrder(_ order: Order, from viewController: PhotoViewController) {
+    func didSelectOrder(_ order: Order) {
         presentRetouchingPhoto(by: order)
     }
-
-    public func didSelectOrderNotEnoughGems(orderAmount: Int, from viewController: PhotoViewController) {
+    
+    func didSelectOrderNotEnoughGems(orderAmount: Int) {
         let balanceViewController = makeBalanceViewController(orderAmount: orderAmount)
         balanceViewController.fromOrderCoordinatorDelegate = self
         navigationController.pushViewController(balanceViewController, animated: true)
     }
-
+    
     func presentRetouchingPhoto(by order: Order) {
         let retouchingPhotoAssembly = RetouchingPhotoAssembly(serviceFactory: serviceFactory, order: order)
 

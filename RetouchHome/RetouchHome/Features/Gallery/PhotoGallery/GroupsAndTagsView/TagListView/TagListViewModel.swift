@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 final class TagListViewModel: ObservableObject {
     let retouchGroup: PresentableRetouchGroup
@@ -18,7 +19,8 @@ final class TagListViewModel: ObservableObject {
     }
 
     func didSelectTagItem(by index: Int) {
-        openIndex = openIndex == index ? nil : index
-        retouchGroup.update(by: index, isOpened: openIndex != nil)
+        let newOpenIndex = openIndex == index ? nil : index
+        retouchGroup.update(by: index, isOpened: newOpenIndex != nil)
+        openIndex = newOpenIndex
     }
 }

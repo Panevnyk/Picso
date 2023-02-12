@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 final class GroupListViewModel: ObservableObject {
     let retouchGroups: [PresentableRetouchGroup]

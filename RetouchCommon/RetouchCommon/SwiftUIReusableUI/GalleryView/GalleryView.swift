@@ -19,6 +19,11 @@ public struct GalleryView: View {
         GridItem(spacing: GalleryView.spacing),
         GridItem(spacing: GalleryView.spacing)
     ]
+    
+    private var targetSize: CGSize {
+        let targetSide = UIScreen.main.bounds.width / 1.5
+        return CGSize(width: targetSide, height: targetSide)
+    }
 
     public init(assets: PHFetchResult<PHAsset>,
                 action: @escaping (_ asset: PHAsset) -> Void) {
@@ -30,14 +35,16 @@ public struct GalleryView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: GalleryView.spacing) {
                 ForEach(0 ..< assets.count, id: \.self) { index in
-                    AssetImage(asset: assets[index],
-                               index: index,
-                               targetSize: CGSize(width: 150, height: 150),
-                               completionHandler: nil)
-                        .aspectRatio(1, contentMode: .fit)
-                        .onTapGesture {
+                    AssetImage(
+                        asset: assets[index],
+                        index: index,
+                        targetSize: targetSize,
+                        completionHandler: nil,
+                        onTapGesture: {
                             action(assets[index])
                         }
+                    )
+                    .aspectRatio(1, contentMode: .fit)
                 }
             }
         }

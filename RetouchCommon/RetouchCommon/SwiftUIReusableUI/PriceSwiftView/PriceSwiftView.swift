@@ -8,15 +8,15 @@
 import SwiftUI
 
 public struct PriceSwiftView: View {
-    @Binding var price: String
+    @Binding var price: Int
 
-    public init(price: Binding<String>) {
+    public init(price: Binding<Int>) {
         self._price = price
     }
 
     public var body: some View {
         HStack(spacing: 6) {
-            Text(price)
+            Text(String(price))
                 .foregroundColor(.kPurple)
                 .font(.kPlainText)
 
@@ -27,6 +27,6 @@ public struct PriceSwiftView: View {
 
 struct PriceSwiftView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceSwiftView(price: .constant("15"))
+        PriceSwiftView(price: .constant(15))
     }
 }

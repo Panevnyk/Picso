@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 struct TagListView: View {
     @ObservedObject private var viewModel: TagListViewModel

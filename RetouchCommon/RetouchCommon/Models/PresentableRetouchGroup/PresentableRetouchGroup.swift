@@ -15,14 +15,14 @@ public final class PresentableRetouchGroup {
     public var price: Int = 0
     public var orderNumber: Int = 0
     public var tags: [RetouchTag] = []
-
+    
     public var selectedRetouchTags: [RetouchTag] = []
     public var descriptionForDesigner: String {
         makeDescriptionForDesigner()
     }
-
+    
     public var isSelected: Bool { return descriptionForDesigner.count > 0 }
-
+    
     public init(retouchGroup: RetouchGroup) {
         self.id = retouchGroup.id
         self.title = retouchGroup.title
@@ -47,7 +47,7 @@ extension PresentableRetouchGroup {
             }
         }
     }
-
+    
     func makeDescriptionForDesigner() -> String {
         var descriptionForDesigner = ""
         
@@ -61,5 +61,19 @@ extension PresentableRetouchGroup {
         }
         
         return descriptionForDesigner
+    }
+}
+
+// MARK: - Equatable
+extension PresentableRetouchGroup: Equatable {
+    public static func == (lhs: PresentableRetouchGroup, rhs: PresentableRetouchGroup) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.title == rhs.title &&
+        lhs.image == rhs.image &&
+        lhs.price == rhs.price &&
+        lhs.orderNumber == rhs.orderNumber &&
+        lhs.tags == rhs.tags &&
+        lhs.selectedRetouchTags == rhs.selectedRetouchTags &&
+        lhs.descriptionForDesigner == rhs.descriptionForDesigner
     }
 }

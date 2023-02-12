@@ -34,7 +34,8 @@ struct AlbumGalleryItemView: View {
                 AssetImage(asset: assets.firstObject,
                            index: 0,
                            targetSize: CGSize(width: 64, height: 64),
-                           completionHandler: nil)
+                           completionHandler: nil,
+                           onTapGesture: nil)
                     .aspectRatio(1, contentMode: .fit)
                     .cornerRadius(6)
 

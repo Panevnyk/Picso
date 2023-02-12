@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 struct GroupListView: View {
     @ObservedObject private var viewModel: GroupListViewModel

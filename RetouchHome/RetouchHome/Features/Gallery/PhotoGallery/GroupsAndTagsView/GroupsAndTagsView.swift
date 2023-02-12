@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 public struct GroupsAndTagsView: View {
     @ObservedObject private var viewModel: GroupsAndTagsViewModel
     
-    public init(retouchGroups: [PresentableRetouchGroup]) {
-        self.viewModel = GroupsAndTagsViewModel(retouchGroups: retouchGroups)
+    public init(retouchGroups: [PresentableRetouchGroup],
+                openGroupIndex: Binding<Int?>,
+                openTagIndex: Binding<Int?>) {
+        self.viewModel = GroupsAndTagsViewModel(retouchGroups: retouchGroups,
+                                                openGroupIndex: openGroupIndex,
+                                                openTagIndex: openTagIndex)
     }
     
     public var body: some View {
@@ -38,18 +43,17 @@ public struct GroupsAndTagsView: View {
         .frame(maxWidth: .infinity)
         .padding([.top, .bottom], 12)
         .background(.white)
-        .animation(.default, value: viewModel.openGroupIndex)
-        .animation(.default, value: viewModel.openTagIndex)
     }
 
     func tagDescriptionAction() {
-        guard let openGroupIndex = viewModel.openGroupIndex,
-              let openTagIndex = viewModel.openTagIndex else { return }
+        viewModel.showTagDescription()
     }
 }
 
 struct GroupsAndTagsView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupsAndTagsView(retouchGroups: [])
+        GroupsAndTagsView(retouchGroups: [],
+                          openGroupIndex: .constant(0),
+                          openTagIndex: .constant(0))
     }
 }
