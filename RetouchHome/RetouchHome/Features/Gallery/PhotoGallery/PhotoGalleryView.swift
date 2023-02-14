@@ -45,22 +45,8 @@ public struct PhotoGalleryView: View {
         }
         .background(Color.kBackground)
         .overlay {
-            ZStack {
-                Rectangle()
-                    .foregroundColor(.black)
-                    .opacity(0.8)
-
-                VStack(spacing: 20) {
-                    Text("      Processing purchase ...")
-                        .font(.kTitleBigText)
-                        .foregroundColor(.white)
-
-                    Image("icPhotoRetouchingWaiting1", bundle: Bundle.common)
-                }
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .ignoresSafeArea(.all)
-            .isHidden(viewModel.isPurchaseBlurViewHidden)
+            processingPurchaseView
+                .isHidden(viewModel.isPurchaseBlurViewHidden)
         }
     }
     
@@ -84,5 +70,23 @@ public struct PhotoGalleryView: View {
         .frame(maxWidth: .infinity)
         .padding([.leading, .trailing], 16)
         .zIndex(100)
+    }
+    
+    var processingPurchaseView: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(.black)
+                .opacity(0.8)
+
+            VStack(spacing: 20) {
+                Text("      Processing purchase ...")
+                    .font(.kTitleBigText)
+                    .foregroundColor(.white)
+
+                Image("icPhotoRetouchingWaiting1", bundle: Bundle.common)
+            }
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .ignoresSafeArea(.all)
     }
 }
