@@ -47,12 +47,12 @@
 		<key>FirebaseCoreInternal.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>34</integer>
 		</dict>
 		<key>FirebaseCrashlytics.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>32</integer>
 		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
