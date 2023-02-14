@@ -20,7 +20,7 @@ public struct ScrollableImage: View {
             GeometryReader { proxy in
                 Image(uiImage: image)
                     .resizable()
-                    .scaledToFill()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: proxy.size.width, height: proxy.size.height)
                     .clipped()
             }

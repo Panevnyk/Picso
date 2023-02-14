@@ -10,5 +10,7 @@ import SwiftUI
 import RetouchCommon
 
 public class PhotoGalleryViewHosting: HostingViewControllerWithoutNavBar<PhotoGalleryView> {
-    public func didSelectOrder() {}
+    public func didSelectOrder() {
+        rootSwiftUIView.didSelectOrder()
+    }
 }

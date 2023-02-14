@@ -17,6 +17,10 @@ public struct PhotoGalleryView: View {
         self.viewModel = viewModel
     }
     
+    public func didSelectOrder() {
+        viewModel.didSelectOrder()
+    }
+    
     // MARK: - UI
     public var body: some View {
         bodyView
