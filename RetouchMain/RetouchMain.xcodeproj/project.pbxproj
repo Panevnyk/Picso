@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1FB7E15F429072AEBEBA3634 /* Pods_RetouchMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47926C539042E62B70D43DA1 /* Pods_RetouchMain.framework */; };
-		9114DED2299BC69D004550DF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114DED1299BC69C004550DF /* AdSupport.framework */; };
 		913833DA25DD645E001E3DBD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913833D925DD645E001E3DBD /* CloudKit.framework */; };
 		9154038425F6463700CFC620 /* RetouchMore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9154038325F6463700CFC620 /* RetouchMore.framework */; };
 		9154038525F6463700CFC620 /* RetouchMore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9154038325F6463700CFC620 /* RetouchMore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,6 +15,7 @@
 		9166B90825FB7B6E00A87FA5 /* RetouchAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9166B90625FB7B6E00A87FA5 /* RetouchAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9166B93525FB7F0A00A87FA5 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166B93425FB7F0A00A87FA5 /* AuthAssembly.swift */; };
 		9166B93925FB7F8600A87FA5 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166B93825FB7F8600A87FA5 /* AuthCoordinator.swift */; };
+		91AB6FF0299EE1D0003C54A3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114DED1299BC69C004550DF /* AdSupport.framework */; };
 		91B1E60425D7D818000E1486 /* ExamplesAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E60325D7D818000E1486 /* ExamplesAssemblies.swift */; };
 		91B1E60825D7D82C000E1486 /* MoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E60725D7D82C000E1486 /* MoreAssembly.swift */; };
 		91B1E63025D7DA9D000E1486 /* ExamplesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E62F25D7DA9D000E1486 /* ExamplesCoordinator.swift */; };
@@ -129,7 +129,7 @@
 			files = (
 				9154038425F6463700CFC620 /* RetouchMore.framework in Frameworks */,
 				91C63CFA25D2C8CB00098E9E /* RetouchHome.framework in Frameworks */,
-				9114DED2299BC69D004550DF /* AdSupport.framework in Frameworks */,
+				91AB6FF0299EE1D0003C54A3 /* AdSupport.framework in Frameworks */,
 				1FB7E15F429072AEBEBA3634 /* Pods_RetouchMain.framework in Frameworks */,
 				91B56B382631660C00EEB738 /* StoreKit.framework in Frameworks */,
 				91EE3263262054720069327F /* RetouchExamples.framework in Frameworks */,

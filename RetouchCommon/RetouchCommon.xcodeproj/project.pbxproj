@@ -30,6 +30,7 @@
 		32F18E4D28D619A2009DF777 /* BalanceSwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E4328D619A1009DF777 /* BalanceSwiftView.swift */; };
 		32F18E4E28D619A2009DF777 /* BackSwiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E4628D619A1009DF777 /* BackSwiftButton.swift */; };
 		32F18E5328D61E00009DF777 /* BalanceSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E5228D61E00009DF777 /* BalanceSwiftViewModel.swift */; };
+		8C56053925F25C54B8C76544 /* Pods_RetouchMain_RetouchCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32217504290E79EC00D8F28E /* Pods_RetouchMain_RetouchCommon.framework */; };
 		910483B125E930E2003DAA47 /* RetouchGroupsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910483B025E930E2003DAA47 /* RetouchGroupsLoader.swift */; };
 		910483B725E931A5003DAA47 /* RetouchGroupRestApiMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910483B625E931A5003DAA47 /* RetouchGroupRestApiMethods.swift */; };
 		9112A815260A36DE00042B65 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112A814260A36DE00042B65 /* PushNotificationService.swift */; };
@@ -461,6 +462,7 @@
 				32217579290E7BAF00D8F28E /* GoogleAppMeasurement.xcframework in Frameworks */,
 				3221757B290E7BAF00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */,
 				32217577290E7BAF00D8F28E /* FirebaseAnalytics.xcframework in Frameworks */,
+				8C56053925F25C54B8C76544 /* Pods_RetouchMain_RetouchCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
