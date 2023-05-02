@@ -88,11 +88,11 @@ target 'RetouchMain' do
     workspace '../Retouch.xcworkspace'
 
     # Firebase
-    pod 'Firebase/Core'
-    pod 'Firebase/Analytics'
-    pod 'Firebase/Crashlytics'
-    pod 'Firebase/RemoteConfig'
-    pod 'Firebase/Messaging'
+#    pod 'Firebase/Core'
+#    pod 'Firebase/Analytics'
+#    pod 'Firebase/Crashlytics'
+#    pod 'Firebase/RemoteConfig'
+#    pod 'Firebase/Messaging'
     # Rx
     pod 'RxSwift'
     pod 'RxCocoa'

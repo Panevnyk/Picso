@@ -3,16 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32217577290E7BAF00D8F28E /* FirebaseAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322174F3290E79EC00D8F28E /* FirebaseAnalytics.xcframework */; };
-		32217578290E7BAF00D8F28E /* FirebaseAnalytics.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322174F3290E79EC00D8F28E /* FirebaseAnalytics.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		32217579290E7BAF00D8F28E /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322174FA290E79EC00D8F28E /* GoogleAppMeasurement.xcframework */; };
-		3221757A290E7BAF00D8F28E /* GoogleAppMeasurement.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322174FA290E79EC00D8F28E /* GoogleAppMeasurement.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3221757B290E7BAF00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322174FB290E79EC00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework */; };
-		3221757C290E7BAF00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322174FB290E79EC00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32409CFC28EDC05300C65C13 /* PopupView.swift */; };
 		32879A2F28FEC92C00F117AA /* PriceSwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A2E28FEC92C00F117AA /* PriceSwiftView.swift */; };
 		32879A3328FEEB8A00F117AA /* ScrollableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32879A3228FEEB8A00F117AA /* ScrollableImage.swift */; };
@@ -212,22 +206,6 @@
 			remoteInfo = RetouchCommon;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3221757D290E7BAF00D8F28E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3221757A290E7BAF00D8F28E /* GoogleAppMeasurement.xcframework in Embed Frameworks */,
-				3221757C290E7BAF00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework in Embed Frameworks */,
-				32217578290E7BAF00D8F28E /* FirebaseAnalytics.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09236B6C1EBD486D5431DC4F /* Pods-RetouchMain-RetouchCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetouchMain-RetouchCommon.debug.xcconfig"; path = "Target Support Files/Pods-RetouchMain-RetouchCommon/Pods-RetouchMain-RetouchCommon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -459,9 +437,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32217579290E7BAF00D8F28E /* GoogleAppMeasurement.xcframework in Frameworks */,
-				3221757B290E7BAF00D8F28E /* GoogleAppMeasurementIdentitySupport.xcframework in Frameworks */,
-				32217577290E7BAF00D8F28E /* FirebaseAnalytics.xcframework in Frameworks */,
 				8C56053925F25C54B8C76544 /* Pods_RetouchMain_RetouchCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1585,7 +1560,6 @@
 				91C00CFC25D2C7D700FF97A2 /* Sources */,
 				91C00CFD25D2C7D700FF97A2 /* Frameworks */,
 				91C00CFE25D2C7D700FF97A2 /* Resources */,
-				3221757D290E7BAF00D8F28E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
