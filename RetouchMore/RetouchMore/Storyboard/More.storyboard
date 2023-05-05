@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xuJ-RJ-34O">
-                                <rect key="frame" x="16" y="116" width="382" height="284"/>
+                                <rect key="frame" x="16" y="116" width="382" height="344"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyP-Dh-cfd" customClass="MoreActionButton" customModule="RetouchMore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
@@ -62,13 +62,20 @@
                                             <constraint firstAttribute="height" constant="44" id="AEh-fr-aIX"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="352-IP-i7w" customClass="MoreActionButton" customModule="RetouchMore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="300" width="382" height="44"/>
+                                        <color key="backgroundColor" red="0.59223808929999999" green="0.68085944890000005" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="i9e-Kl-z3k"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="200" id="PvY-q5-8iV"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a32-te-Y9u" customClass="ReversePurpleButton" customModule="RetouchCommon">
-                                <rect key="frame" x="352" y="432" width="46" height="44"/>
+                                <rect key="frame" x="352" y="492" width="46" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Cn7-DS-aNF"/>
                                 </constraints>
@@ -84,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hot-vS-qda">
-                                <rect key="frame" x="16" y="488" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="548" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -113,6 +120,7 @@
                         <outlet property="headerView" destination="9QM-kG-QWp" id="Fzn-uI-Eue"/>
                         <outlet property="privacyPolicyView" destination="Blu-O6-jaf" id="sIG-r1-JY9"/>
                         <outlet property="pushNotificationsView" destination="oTS-Qy-fS4" id="ASQ-GF-HBd"/>
+                        <outlet property="removeAccountView" destination="352-IP-i7w" id="msu-BL-bJH"/>
                         <outlet property="shareView" destination="FyP-Dh-cfd" id="Cj9-uY-zBL"/>
                         <outlet property="signInDescriptionLabel" destination="hot-vS-qda" id="Yet-e9-zFS"/>
                         <outlet property="signOut" destination="a32-te-Y9u" id="7Dn-zu-XNq"/>
@@ -186,7 +194,7 @@
     </scenes>
     <resources>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

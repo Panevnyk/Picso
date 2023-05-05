@@ -43,6 +43,7 @@ public struct RestApiConstants {
     public static let passportFrom = "passportFrom"
     public static let deviceId = "deviceId"
     public static let platform = "platform"
+    public static let freeGemsAvailable = "freeGemsAvailable"
     public static let appleUserId = "appleUserId"
     public static let gemCount = "gemCount"
     public static let gemCreditCount = "gemCreditCount"

@@ -17,6 +17,7 @@ public enum AuthRestApiMethods: RestApiMethod {
     case currentUser
     case forgotPassword(ForgotPasswordParameters)
     case resetPassword(ResetPasswordParameters)
+    case removeAccount
     case signout
     case updatePushNotificationToken(UpdatePushNotificationTokenParameters)
 
@@ -28,6 +29,7 @@ public enum AuthRestApiMethods: RestApiMethod {
     private static let currentUserURL = "/api/auth/currentUser"
     private static let forgotPasswordURL = "/api/auth/forgotPassword"
     private static let resetPasswordURL = "/api/auth/resetPassword"
+    private static let removeAccountURL = "/api/auth"
     private static let signoutURL = "/api/auth/signout"
     private static let updatePushNotificationTokenUrl = "/api/auth/updateDeviceToken"
 
@@ -62,6 +64,9 @@ public enum AuthRestApiMethods: RestApiMethod {
             return RestApiData(url: RestApiConstants.baseURL + AuthRestApiMethods.resetPasswordURL,
                                httpMethod: .post,
                                parameters: parameters)
+        case .removeAccount:
+            return RestApiData(url: RestApiConstants.baseURL + AuthRestApiMethods.removeAccountURL,
+                               httpMethod: .delete)
         case .signout:
             return RestApiData(url: RestApiConstants.baseURL + AuthRestApiMethods.signoutURL,
                                httpMethod: .post)

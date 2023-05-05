@@ -12,6 +12,7 @@ public struct SigninWithAppleParameters: ParametersProtocol {
     public let fullName: String?
     public let email: String?
     public let deviceId: String
+    public let freeGemsAvailable: Bool
 
     public init(appleUserId: String,
                 fullName: String? = nil,
@@ -20,6 +21,7 @@ public struct SigninWithAppleParameters: ParametersProtocol {
         self.fullName = fullName
         self.email = email
         self.deviceId = DeviceHelper.deviceId
+        self.freeGemsAvailable = DeviceHelper.freeGemsAvailable
     }
 
     public var parametersValue: Parameters {
@@ -29,7 +31,8 @@ public struct SigninWithAppleParameters: ParametersProtocol {
             RestApiConstants.email: email ?? "",
             RestApiConstants.deviceId: deviceId,
             RestApiConstants.clientApp: Constants.currentClientApp,
-            RestApiConstants.platform: Constants.platform
+            RestApiConstants.platform: Constants.platform,
+            RestApiConstants.freeGemsAvailable: freeGemsAvailable
             ]
         return parameters
     }
@@ -37,16 +40,19 @@ public struct SigninWithAppleParameters: ParametersProtocol {
 
 public struct SigninWithDeviceIdParameters: ParametersProtocol {
     public let deviceId: String
+    public let freeGemsAvailable: Bool
     
     public init(deviceId: String) {
         self.deviceId = deviceId
+        self.freeGemsAvailable = DeviceHelper.freeGemsAvailable
     }
 
     public var parametersValue: Parameters {
         let parameters: [String: Any] = [
             RestApiConstants.deviceId: deviceId,
             RestApiConstants.clientApp: Constants.currentClientApp,
-            RestApiConstants.platform: Constants.platform
+            RestApiConstants.platform: Constants.platform,
+            RestApiConstants.freeGemsAvailable: freeGemsAvailable
             ]
         return parameters
     }
@@ -74,6 +80,7 @@ public struct SignupParameters: ParametersProtocol {
     public let email: String
     public let password: String
     public let deviceId: String
+    public let freeGemsAvailable: Bool
 
     public init(email: String,
                 password: String
@@ -81,6 +88,7 @@ public struct SignupParameters: ParametersProtocol {
         self.email = email
         self.password = password
         self.deviceId = DeviceHelper.deviceId
+        self.freeGemsAvailable = DeviceHelper.freeGemsAvailable
     }
 
     public var parametersValue: Parameters {
@@ -89,7 +97,8 @@ public struct SignupParameters: ParametersProtocol {
             RestApiConstants.password: password,
             RestApiConstants.deviceId: deviceId,
             RestApiConstants.clientApp: Constants.currentClientApp,
-            RestApiConstants.platform: Constants.platform
+            RestApiConstants.platform: Constants.platform,
+            RestApiConstants.freeGemsAvailable: freeGemsAvailable
             ]
         return parameters
     }

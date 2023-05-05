@@ -60,8 +60,6 @@
 	<string>Retouch App adjusts and retouches your photos and it requires access to Camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Retouch App adjusts and retouches your photos and it requires access to PhotoGallery.</string>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>Your data will be used to create a user&apos;s audience and make personalized ads for people who really need it</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

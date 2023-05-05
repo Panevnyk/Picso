@@ -42,6 +42,7 @@ public final class UserData: Decodable {
 // MARK: - Save
 public extension UserData {
     static func save(userData: UserData) {
+        shared.disableFreeGemsAvailableFeature()
         shared.update(by: userData)
         shared.saveDataToKeychainService()
         shared.didSigninAction()
@@ -58,6 +59,12 @@ public extension UserData {
         user.update(by: User.empty)
         removeDataFromKeychainService()
         didSignoutAction()
+    }
+    
+    private func disableFreeGemsAvailableFeature() {
+        if DeviceHelper.freeGemsAvailable {
+            DeviceHelper.freeGemsAvailable = false
+        }
     }
     
     private func didSigninAction() {

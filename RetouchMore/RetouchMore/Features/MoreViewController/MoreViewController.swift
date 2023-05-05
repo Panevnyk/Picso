@@ -26,6 +26,7 @@ public class MoreViewController: UIViewController {
     @IBOutlet private var termsAndConditionsView: MoreActionButton!
     @IBOutlet private var privacyPolicyView: MoreActionButton!
     @IBOutlet private var pushNotificationsView: MoreActionButton!
+    @IBOutlet private var removeAccountView: MoreActionButton!
 
     @IBOutlet private var signOut: ReversePurpleButton!
     @IBOutlet private var signInDescriptionLabel: UILabel!
@@ -83,6 +84,10 @@ private extension MoreViewController {
         pushNotificationsView.setImage("icNotifications")
         pushNotificationsView.delegate = self
         
+        removeAccountView.setTitle("Remove account")
+        removeAccountView.setImage("icTrash")
+        removeAccountView.delegate = self
+        
         signInDescriptionLabel.textColor = .kGrayText
         signInDescriptionLabel.font = UIFont.kDescriptionText
 
@@ -93,6 +98,7 @@ private extension MoreViewController {
     }
     
     func updateUI() {
+        removeAccountView.isHidden = !viewModel.isRemoveAccountAvailable
         signOut.setTitle(viewModel.signInOutTitle, for: .normal)
         signInDescriptionLabel.text = viewModel.signInDescriptionTitle
         userIdLabel.text = viewModel.userIdTitle
@@ -108,6 +114,7 @@ extension MoreViewController: BaseTapableViewDelegate {
         case termsAndConditionsView.xibView: termsOfUse()
         case privacyPolicyView.xibView: privacyPolicy()
         case pushNotificationsView.xibView: openPushNotificationSettings()
+        case removeAccountView.xibView: removeAccount()
         default: break
         }
     }
@@ -145,6 +152,38 @@ extension MoreViewController: BaseTapableViewDelegate {
         AnalyticsService.logAction(.openPushNotificationSettings)
         SettingsHelper.openSettings()
     }
+    
+    private func removeAccount() {
+        if viewModel.isRemoveAccountAvailable {
+            removeAccountAlert { [weak self] in
+                guard let self = self else { return }
+    
+                AnalyticsService.logAction(.removeAccount)
+                ActivityIndicatorHelper.shared.show()
+                self.viewModel.removeAccount { [weak self] in
+                    self?.updateUI()
+                    ActivityIndicatorHelper.shared.hide()
+                }
+            }
+        }
+    }
+    
+    private func removeAccountAlert(removeCallback: (() -> Void)?) {
+        AnalyticsService.logAction(.showOutOfFreeOrderAlert)
+        let remove = RTAlertAction(title: "Remove account",
+                                  style: .default,
+                                  action: { removeCallback?() })
+        let cancel = RTAlertAction(title: "Cancel",
+                                   style: .cancel)
+        let img = UIImage(named: "icDoYouWannaOrder", in: Bundle.common, compatibleWith: nil)
+        let alert = RTAlertController(title: "Do you realy want to remove your account?",
+                                      message: "All your Gems will be removed. You will not have access to your previous orders.",
+                                      image: img,
+                                      actionPositionStyle: .horizontal)
+        alert.addActions([cancel, remove])
+        alert.show()
+    }
+    
 }
 
 // MARK: - MFMailComposeViewControllerDelegate

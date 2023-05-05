@@ -11,10 +11,12 @@ import RetouchCommon
 
 public protocol MoreViewModelProtocol {
     var isUserLoginedWithSecondaryLogin: Bool { get }
+    var isRemoveAccountAvailable: Bool { get }
     var signInOutTitle: String? { get }
     var signInDescriptionTitle: String? { get }
     var userIdTitle: String { get }
     
+    func removeAccount(completion: (() -> Void)?)
     func signOut(completion: (() -> Void)?)
 
     func makeTermsAndConditionsViewModel() -> InfoViewModelProtocol
@@ -35,6 +37,11 @@ public final class MoreViewModel: MoreViewModelProtocol {
     // MARK: - Public methods
     public var isUserLoginedWithSecondaryLogin: Bool {
         UserData.shared.loginStatus == .secondaryLogin
+    }
+    
+    public var isRemoveAccountAvailable: Bool {
+        UserData.shared.loginStatus == .primaryLogin
+        || UserData.shared.loginStatus == .secondaryLogin
     }
     
     public var signInOutTitle: String? {
@@ -64,7 +71,14 @@ public final class MoreViewModel: MoreViewModelProtocol {
             }
         }
     }
-
+    
+    public func removeAccount(completion: (() -> Void)?) {
+        let method = AuthRestApiMethods.removeAccount
+        restApiManager.call(method: method) { [weak self] (result) in
+            self?.signOut(completion: completion)
+        }
+    }
+    
     public func makeTermsAndConditionsViewModel() -> InfoViewModelProtocol {
         return TermsAndConditionsViewModel()
     }

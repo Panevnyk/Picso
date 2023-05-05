@@ -129,6 +129,7 @@ public extension Constants {
             case termsOfUseFromMore = "act_terms_of_use_from_more"
             case privacyPolicyFromMore = "act_privacy_policy_from_more"
             case openPushNotificationSettings = "act_open_push_notification_settings"
+            case removeAccount = "act_remove_account"
             case signOut = "act_sign_out"
         }
     }
