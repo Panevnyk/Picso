@@ -14,5 +14,5 @@ public struct Constants {
     public static let deepLinkURLScheme = "com.vp.Retouch2"
     public static let remoteControlAppVersion = 1
     public static let minRetouchingCost = 15
-    public static let exampleBaseURL = "https://s3.us-east-2.amazonaws.com/retouch.app/examples/"
+    public static let exampleBaseURL = "https://picso-examples.s3.amazonaws.com/"
 }
