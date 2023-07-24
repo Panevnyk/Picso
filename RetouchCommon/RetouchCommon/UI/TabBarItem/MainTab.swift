@@ -1,6 +1,6 @@
 //
 //  TabBarItem.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 25.11.2020.
 //

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +33,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="335" height="394"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-CE-FLg">
-                            <rect key="frame" x="135.5" y="16" width="64" height="64"/>
+                            <rect key="frame" x="135.66666666666666" y="16" width="64" height="64"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kad-BX-HOL">
                                     <rect key="frame" x="20" y="12" width="24" height="24"/>
@@ -63,7 +61,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="991-3a-j56">
-                            <rect key="frame" x="129.5" y="96" width="76" height="30"/>
+                            <rect key="frame" x="129.66666666666666" y="96" width="76" height="30"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhJ-Nf-trx">
                                     <rect key="frame" x="10" y="0.0" width="42" height="30"/>
@@ -91,7 +89,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrA-qe-KYe" customClass="TriangleView" customModule="RetouchCommon" customModuleProvider="target">
-                            <rect key="frame" x="156.5" y="126" width="22" height="12"/>
+                            <rect key="frame" x="156.66666666666666" y="126" width="22" height="12"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="22" id="8Kf-NT-awY"/>
@@ -99,26 +97,26 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-Sh-DDW">
-                            <rect key="frame" x="16" y="150" width="303" height="20.5"/>
+                            <rect key="frame" x="16" y="150" width="303" height="20.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-qn-WQy">
-                            <rect key="frame" x="16" y="194.5" width="303" height="20.5"/>
+                            <rect key="frame" x="16" y="194.33333333333334" width="303" height="20.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-I0-TUu" customClass="MessageTextInputView" customModule="RetouchCommon" customModuleProvider="target">
-                            <rect key="frame" x="16" y="239" width="303" height="87"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-I0-TUu" customClass="AMessageTextInputView" customModule="RetouchCommon" customModuleProvider="target">
+                            <rect key="frame" x="16" y="238.66666666666666" width="303" height="87.333333333333343"/>
                             <color key="backgroundColor" red="0.56355196240000005" green="0.67533421520000003" blue="0.99889332060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" priority="250" constant="34" id="yex-3p-5vX"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czC-fB-KxJ" customClass="ReversePurpleButton" customModule="RetouchCommon" customModuleProvider="target">
-                            <rect key="frame" x="16" y="342" width="143.5" height="36"/>
+                            <rect key="frame" x="16" y="342" width="143.66666666666666" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="Pim-K6-hpa"/>
                             </constraints>
@@ -128,7 +126,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z5-ZQ-gsL" customClass="PurpleButton" customModule="RetouchCommon" customModuleProvider="target">
-                            <rect key="frame" x="175.5" y="342" width="143.5" height="36"/>
+                            <rect key="frame" x="175.66666666666663" y="342" width="143.33333333333337" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="UBZ-Sg-w5Y"/>
                             </constraints>

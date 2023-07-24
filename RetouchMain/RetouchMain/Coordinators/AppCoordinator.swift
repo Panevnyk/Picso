@@ -44,7 +44,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        if StartingTutorialViewController.isShowen {
+        if AStartingTutorialView.isShowen {
             startMainTabBarCoordinator(animated: false)
         } else {
             startTutorialAuthCoordinator(animated: false)

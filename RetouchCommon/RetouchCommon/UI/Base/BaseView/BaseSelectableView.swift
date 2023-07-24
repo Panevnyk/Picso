@@ -1,6 +1,6 @@
 //
 //  BaseSelectableView.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 02.12.2020.
 //

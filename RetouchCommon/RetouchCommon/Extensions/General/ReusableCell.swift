@@ -1,6 +1,6 @@
 //
 //  ReusableCell.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 13.11.2020.
 //

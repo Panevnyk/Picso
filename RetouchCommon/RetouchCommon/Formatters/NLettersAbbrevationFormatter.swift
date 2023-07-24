@@ -1,6 +1,6 @@
 //
 //  AbbrevationFormatter.swift
-//  Hotelion
+//  Retouch
 //
 //  Created by Panevnyk Vlad on 1/19/20.
 

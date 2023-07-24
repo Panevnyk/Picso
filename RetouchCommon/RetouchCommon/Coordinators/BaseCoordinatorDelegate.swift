@@ -1,6 +1,6 @@
 //
 //  BaseCoordinatorDelegate.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 18.11.2020.
 //

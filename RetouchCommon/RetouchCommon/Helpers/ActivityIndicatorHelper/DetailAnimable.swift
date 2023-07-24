@@ -1,6 +1,6 @@
 //
 //  DetailAnimable.swift
-//  Hotelion
+//  Retouch
 //
 //  Created by Panevnyk Vlad on 3/15/20.
 //

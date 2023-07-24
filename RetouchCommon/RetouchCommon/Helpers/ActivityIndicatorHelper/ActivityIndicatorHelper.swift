@@ -1,6 +1,6 @@
 //
 //  ActivityIndicatorHelper.swift
-//  Hotelion
+//  Retouch
 //
 //  Created by Panevnyk Vlad on 3/23/20.
 //

@@ -14,8 +14,6 @@
 		9154859B29A956EF0046D9D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114DED1299BC69C004550DF /* AdSupport.framework */; };
 		9166B90725FB7B6E00A87FA5 /* RetouchAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9166B90625FB7B6E00A87FA5 /* RetouchAuth.framework */; };
 		9166B90825FB7B6E00A87FA5 /* RetouchAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9166B90625FB7B6E00A87FA5 /* RetouchAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9166B93525FB7F0A00A87FA5 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166B93425FB7F0A00A87FA5 /* AuthAssembly.swift */; };
-		9166B93925FB7F8600A87FA5 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166B93825FB7F8600A87FA5 /* AuthCoordinator.swift */; };
 		91B1E60425D7D818000E1486 /* ExamplesAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E60325D7D818000E1486 /* ExamplesAssemblies.swift */; };
 		91B1E60825D7D82C000E1486 /* MoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E60725D7D82C000E1486 /* MoreAssembly.swift */; };
 		91B1E63025D7DA9D000E1486 /* ExamplesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E62F25D7DA9D000E1486 /* ExamplesCoordinator.swift */; };
@@ -34,13 +32,15 @@
 		91EE3263262054720069327F /* RetouchExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EE3262262054720069327F /* RetouchExamples.framework */; };
 		91EE3264262054720069327F /* RetouchExamples.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91EE3262262054720069327F /* RetouchExamples.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91F47BE625D2D5EC003DF40A /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BE525D2D5EC003DF40A /* HomeAssembly.swift */; };
-		91F47BED25D2D828003DF40A /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BEC25D2D828003DF40A /* ServiceFactory.swift */; };
 		91F47C9925D2DB13003DF40A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C9825D2DB13003DF40A /* AppCoordinator.swift */; };
 		91F47C9D25D2DB48003DF40A /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C9C25D2DB48003DF40A /* MainTabBarCoordinator.swift */; };
 		91F47CA125D2EFCA003DF40A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47CA025D2EFCA003DF40A /* HomeCoordinator.swift */; };
 		998189718A4A18A07DAD3295 /* Pods_RetouchMainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF16567B5DCCC6A1AEACCCC /* Pods_RetouchMainTests.framework */; };
 		D196024627F0934200DBA675 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D196024527F0934100DBA675 /* GoogleService-Info.plist */; };
 		D1A0856F2814410F0086B60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A0856E2814410F0086B60A /* Assets.xcassets */; };
+		F43B74372A6AAFE300E05184 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B74362A6AAFE300E05184 /* AuthAssembly.swift */; };
+		F43B74392A6AAFF000E05184 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B74382A6AAFF000E05184 /* AuthCoordinator.swift */; };
+		F43B743C2A6AB02800E05184 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B743B2A6AB02800E05184 /* ServiceFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +90,6 @@
 		913833D925DD645E001E3DBD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9154038325F6463700CFC620 /* RetouchMore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RetouchMore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9166B90625FB7B6E00A87FA5 /* RetouchAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RetouchAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9166B93425FB7F0A00A87FA5 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
-		9166B93825FB7F8600A87FA5 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		91B1E60325D7D818000E1486 /* ExamplesAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesAssemblies.swift; sourceTree = "<group>"; };
 		91B1E60725D7D82C000E1486 /* MoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAssembly.swift; sourceTree = "<group>"; };
 		91B1E60B25D7D85B000E1486 /* RetouchExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RetouchExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,12 +112,14 @@
 		91EE31DB261F09610069327F /* ForceAppUpdateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceAppUpdateCoordinator.swift; sourceTree = "<group>"; };
 		91EE3262262054720069327F /* RetouchExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RetouchExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F47BE525D2D5EC003DF40A /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
-		91F47BEC25D2D828003DF40A /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		91F47C9825D2DB13003DF40A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		91F47C9C25D2DB48003DF40A /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		91F47CA025D2EFCA003DF40A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		D196024527F0934100DBA675 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1A0856E2814410F0086B60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43B74362A6AAFE300E05184 /* AuthAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
+		F43B74382A6AAFF000E05184 /* AuthCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		F43B743B2A6AB02800E05184 /* ServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 				913833D625DD645B001E3DBD /* RetouchMain.entitlements */,
 				91C00C7925D2C72800FF97A2 /* AppDelegate.swift */,
 				91C00C7B25D2C72800FF97A2 /* SceneDelegate.swift */,
-				91F47BEB25D2D81D003DF40A /* ServiceFactory */,
+				F43B743A2A6AB00800E05184 /* ServiceFactory */,
 				91F47BE425D2D5CF003DF40A /* Coordinators */,
 				91F47BE325D2D5C6003DF40A /* Assemblies */,
 				91C00C8425D2C72A00FF97A2 /* LaunchScreen.storyboard */,
@@ -246,10 +246,10 @@
 		91F47BE325D2D5C6003DF40A /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				F43B74362A6AAFE300E05184 /* AuthAssembly.swift */,
 				91F47BE525D2D5EC003DF40A /* HomeAssembly.swift */,
 				91B1E60325D7D818000E1486 /* ExamplesAssemblies.swift */,
 				91B1E60725D7D82C000E1486 /* MoreAssembly.swift */,
-				9166B93425FB7F0A00A87FA5 /* AuthAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -259,19 +259,19 @@
 			children = (
 				91F47C9825D2DB13003DF40A /* AppCoordinator.swift */,
 				91F47C9C25D2DB48003DF40A /* MainTabBarCoordinator.swift */,
+				F43B74382A6AAFF000E05184 /* AuthCoordinator.swift */,
 				91F47CA025D2EFCA003DF40A /* HomeCoordinator.swift */,
 				91EE31DB261F09610069327F /* ForceAppUpdateCoordinator.swift */,
 				91B1E62F25D7DA9D000E1486 /* ExamplesCoordinator.swift */,
 				91B1E63325D7DAAA000E1486 /* MoreCoordinator.swift */,
-				9166B93825FB7F8600A87FA5 /* AuthCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		91F47BEB25D2D81D003DF40A /* ServiceFactory */ = {
+		F43B743A2A6AB00800E05184 /* ServiceFactory */ = {
 			isa = PBXGroup;
 			children = (
-				91F47BEC25D2D828003DF40A /* ServiceFactory.swift */,
+				F43B743B2A6AB02800E05184 /* ServiceFactory.swift */,
 			);
 			path = ServiceFactory;
 			sourceTree = "<group>";
@@ -499,11 +499,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91B1E63425D7DAAA000E1486 /* MoreCoordinator.swift in Sources */,
-				9166B93925FB7F8600A87FA5 /* AuthCoordinator.swift in Sources */,
+				F43B74392A6AAFF000E05184 /* AuthCoordinator.swift in Sources */,
 				91B1E60425D7D818000E1486 /* ExamplesAssemblies.swift in Sources */,
-				91F47BED25D2D828003DF40A /* ServiceFactory.swift in Sources */,
-				9166B93525FB7F0A00A87FA5 /* AuthAssembly.swift in Sources */,
 				91F47BE625D2D5EC003DF40A /* HomeAssembly.swift in Sources */,
+				F43B743C2A6AB02800E05184 /* ServiceFactory.swift in Sources */,
+				F43B74372A6AAFE300E05184 /* AuthAssembly.swift in Sources */,
 				91B1E63025D7DA9D000E1486 /* ExamplesCoordinator.swift in Sources */,
 				91EE31DC261F09610069327F /* ForceAppUpdateCoordinator.swift in Sources */,
 				91F47C9925D2DB13003DF40A /* AppCoordinator.swift in Sources */,
@@ -700,7 +700,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.Retouch2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Retouch2 Provision Profile";
@@ -734,7 +734,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vp.Retouch2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Retouch2 Provision Profile";

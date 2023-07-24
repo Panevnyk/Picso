@@ -1,10 +1,8 @@
 //
 //  TableViewPlaceholder.swift
-//  PocketDoctor
+//  RetouchCommon
 //
-//  Created by sxsasha on 8/8/17.
-//  Copyright © 2017 sxsasha. All rights reserved.
-//
+//  Created by Vladyslav Panevnyk on 8/8/17.
 
 import UIKit
 

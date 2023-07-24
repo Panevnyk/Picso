@@ -1,6 +1,6 @@
 //
 //  MessageView.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 20.01.2021.
 //

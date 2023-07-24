@@ -1,6 +1,6 @@
 //
 //  AlertHelper.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 04.12.2020.
 //

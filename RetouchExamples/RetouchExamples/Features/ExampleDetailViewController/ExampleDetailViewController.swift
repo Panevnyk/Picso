@@ -13,7 +13,7 @@ public final class ExampleDetailViewController: UIViewController {
     // UI
     @IBOutlet private var beforeAfterImagePresentableView: BeforeAfterImagePresentableView!
     @IBOutlet private var bottomContainerView: ImageInfoContainerView!
-    @IBOutlet private var backButton: BackButton!
+    @IBOutlet private var backButton: BackButton1!
     @IBOutlet private var eyeButton: EyeButton!
     @IBOutlet private var longTapTutorialView: LongTapTutorialView!
     @IBOutlet private var waterSignImageView: UIImageView!

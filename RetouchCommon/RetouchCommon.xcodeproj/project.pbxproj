@@ -66,7 +66,7 @@
 		91B1E65625D80938000E1486 /* BeforeAfterImagePresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E65525D80938000E1486 /* BeforeAfterImagePresentableView.swift */; };
 		91B1E66125D80A5E000E1486 /* ImageInfoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E66025D80A5E000E1486 /* ImageInfoContainerView.swift */; };
 		91B1E66725D80A73000E1486 /* ImageInfoContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B1E66625D80A73000E1486 /* ImageInfoContainerView.xib */; };
-		91B1E66E25D82A24000E1486 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E66D25D82A24000E1486 /* BackButton.swift */; };
+		91B1E66E25D82A24000E1486 /* BackButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E66D25D82A24000E1486 /* BackButton1.swift */; };
 		91B1E67225D82C61000E1486 /* EyeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E67125D82C61000E1486 /* EyeButton.swift */; };
 		91B1E68825D84509000E1486 /* UICollectionView+ReloadDataAndKeepOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E68725D84509000E1486 /* UICollectionView+ReloadDataAndKeepOffset.swift */; };
 		91B1E68D25D84780000E1486 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1E68C25D84780000E1486 /* PurpleButton.swift */; };
@@ -81,8 +81,6 @@
 		91C00D0F25D2C7D800FF97A2 /* RetouchCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C00D0E25D2C7D800FF97A2 /* RetouchCommonTests.swift */; };
 		91C00D1125D2C7D800FF97A2 /* RetouchCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C00D0325D2C7D700FF97A2 /* RetouchCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91C48261260CE6CC00750F65 /* DeepLinkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C48260260CE6CC00750F65 /* DeepLinkHelper.swift */; };
-		91CF929625D53B65000D7130 /* MessageTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CF929425D53B65000D7130 /* MessageTextInputView.xib */; };
-		91CF929725D53B65000D7130 /* MessageTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CF929525D53B65000D7130 /* MessageTextInputView.swift */; };
 		91CF929B25D53D6E000D7130 /* UIScrollView+ToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CF929A25D53D6E000D7130 /* UIScrollView+ToBottom.swift */; };
 		91CF929F25D543D5000D7130 /* BaseKeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CF929E25D543D5000D7130 /* BaseKeyboardObservableViewController.swift */; };
 		91CF92E125D56FBF000D7130 /* RetouchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CF92E025D56FBF000D7130 /* RetouchGroup.swift */; };
@@ -107,11 +105,7 @@
 		91EF683F25E6953800253BFC /* ImageInfoContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF683E25E6953800253BFC /* ImageInfoContainerViewModel.swift */; };
 		91F47C4C25D2D8D3003DF40A /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F47BF225D2D8D3003DF40A /* MessageView.xib */; };
 		91F47C4D25D2D8D3003DF40A /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BF325D2D8D3003DF40A /* MessageView.swift */; };
-		91F47C4F25D2D8D3003DF40A /* SUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BF725D2D8D3003DF40A /* SUTextField.swift */; };
-		91F47C5025D2D8D3003DF40A /* SUDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BF825D2D8D3003DF40A /* SUDateTextField.swift */; };
-		91F47C5125D2D8D3003DF40A /* SUPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BF925D2D8D3003DF40A /* SUPasswordTextField.swift */; };
 		91F47C5225D2D8D3003DF40A /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BFB25D2D8D3003DF40A /* MainTab.swift */; };
-		91F47C5325D2D8D3003DF40A /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47BFD25D2D8D3003DF40A /* CheckBoxView.swift */; };
 		91F47C5425D2D8D3003DF40A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F47BFF25D2D8D3003DF40A /* HeaderView.xib */; };
 		91F47C5525D2D8D3003DF40A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C0025D2D8D3003DF40A /* HeaderView.swift */; };
 		91F47C5625D2D8D3003DF40A /* BaseScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C0225D2D8D3003DF40A /* BaseScrollViewController.swift */; };
@@ -125,14 +119,6 @@
 		91F47C5E25D2D8D3003DF40A /* DoubleFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C0D25D2D8D3003DF40A /* DoubleFormatter.swift */; };
 		91F47C5F25D2D8D3003DF40A /* NLettersPercentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C0E25D2D8D3003DF40A /* NLettersPercentFormatter.swift */; };
 		91F47C6025D2D8D3003DF40A /* AbbrevationFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C0F25D2D8D3003DF40A /* AbbrevationFormatter.swift */; };
-		91F47C6125D2D8D3003DF40A /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1125D2D8D3003DF40A /* EmailValidator.swift */; };
-		91F47C6225D2D8D3003DF40A /* PhoneNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1225D2D8D3003DF40A /* PhoneNumberValidator.swift */; };
-		91F47C6325D2D8D3003DF40A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1325D2D8D3003DF40A /* Validator.swift */; };
-		91F47C6425D2D8D3003DF40A /* TextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1425D2D8D3003DF40A /* TextValidator.swift */; };
-		91F47C6525D2D8D3003DF40A /* DateOfBirthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1525D2D8D3003DF40A /* DateOfBirthValidator.swift */; };
-		91F47C6625D2D8D3003DF40A /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1625D2D8D3003DF40A /* PasswordValidator.swift */; };
-		91F47C6725D2D8D3003DF40A /* PassportNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1725D2D8D3003DF40A /* PassportNumberValidator.swift */; };
-		91F47C6825D2D8D3003DF40A /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1825D2D8D3003DF40A /* CodeValidator.swift */; };
 		91F47C6925D2D8D3003DF40A /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1A25D2D8D3003DF40A /* UIFont+Style.swift */; };
 		91F47C6A25D2D8D3003DF40A /* UIAlertController+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1B25D2D8D3003DF40A /* UIAlertController+CustomView.swift */; };
 		91F47C6B25D2D8D3003DF40A /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F47C1C25D2D8D3003DF40A /* UIColor+Style.swift */; };
@@ -195,6 +181,21 @@
 		D1D274AE2642CD34009F08FC /* SmallRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D274AD2642CD34009F08FC /* SmallRatingView.xib */; };
 		D1E2E0BA2698793900B72A34 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2E0B92698793900B72A34 /* UserDefaultsBacked.swift */; };
 		D1E2E0BC26987CE000B72A34 /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2E0BB26987CE000B72A34 /* UIApplication+KeyWindow.swift */; };
+		F40AB7422A6557E400730883 /* SUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB73C2A6557E300730883 /* SUTextField.swift */; };
+		F40AB7432A6557E400730883 /* SUDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB73D2A6557E300730883 /* SUDateTextField.swift */; };
+		F40AB7442A6557E400730883 /* SUPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB73E2A6557E300730883 /* SUPasswordTextField.swift */; };
+		F40AB7452A6557E400730883 /* MessageTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40AB7402A6557E300730883 /* MessageTextInputView.xib */; };
+		F40AB7462A6557E400730883 /* MessageTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7412A6557E300730883 /* MessageTextInputView.swift */; };
+		F40AB7502A6558C400730883 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7482A6558C400730883 /* EmailValidator.swift */; };
+		F40AB7512A6558C400730883 /* PhoneNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7492A6558C400730883 /* PhoneNumberValidator.swift */; };
+		F40AB7522A6558C400730883 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74A2A6558C400730883 /* Validator.swift */; };
+		F40AB7532A6558C400730883 /* TextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74B2A6558C400730883 /* TextValidator.swift */; };
+		F40AB7542A6558C400730883 /* DateOfBirthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74C2A6558C400730883 /* DateOfBirthValidator.swift */; };
+		F40AB7552A6558C400730883 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74D2A6558C400730883 /* PasswordValidator.swift */; };
+		F40AB7562A6558C400730883 /* PassportNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74E2A6558C400730883 /* PassportNumberValidator.swift */; };
+		F40AB7572A6558C400730883 /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74F2A6558C400730883 /* CodeValidator.swift */; };
+		F40AB75A2A6558CA00730883 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7592A6558CA00730883 /* CheckBoxView.swift */; };
+		F465939B2A6E859B00BE9BB5 /* RestApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,7 +298,7 @@
 		91B1E65525D80938000E1486 /* BeforeAfterImagePresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeAfterImagePresentableView.swift; sourceTree = "<group>"; };
 		91B1E66025D80A5E000E1486 /* ImageInfoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoContainerView.swift; sourceTree = "<group>"; };
 		91B1E66625D80A73000E1486 /* ImageInfoContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageInfoContainerView.xib; sourceTree = "<group>"; };
-		91B1E66D25D82A24000E1486 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		91B1E66D25D82A24000E1486 /* BackButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton1.swift; sourceTree = "<group>"; };
 		91B1E67125D82C61000E1486 /* EyeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeButton.swift; sourceTree = "<group>"; };
 		91B1E68725D84509000E1486 /* UICollectionView+ReloadDataAndKeepOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReloadDataAndKeepOffset.swift"; sourceTree = "<group>"; };
 		91B1E68C25D84780000E1486 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
@@ -315,8 +316,6 @@
 		91C00D0E25D2C7D800FF97A2 /* RetouchCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetouchCommonTests.swift; sourceTree = "<group>"; };
 		91C00D1025D2C7D800FF97A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C48260260CE6CC00750F65 /* DeepLinkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHelper.swift; sourceTree = "<group>"; };
-		91CF929425D53B65000D7130 /* MessageTextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTextInputView.xib; sourceTree = "<group>"; };
-		91CF929525D53B65000D7130 /* MessageTextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextInputView.swift; sourceTree = "<group>"; };
 		91CF929A25D53D6E000D7130 /* UIScrollView+ToBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ToBottom.swift"; sourceTree = "<group>"; };
 		91CF929E25D543D5000D7130 /* BaseKeyboardObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseKeyboardObservableViewController.swift; sourceTree = "<group>"; };
 		91CF92E025D56FBF000D7130 /* RetouchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetouchGroup.swift; sourceTree = "<group>"; };
@@ -341,11 +340,7 @@
 		91EF683E25E6953800253BFC /* ImageInfoContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoContainerViewModel.swift; sourceTree = "<group>"; };
 		91F47BF225D2D8D3003DF40A /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		91F47BF325D2D8D3003DF40A /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		91F47BF725D2D8D3003DF40A /* SUTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUTextField.swift; sourceTree = "<group>"; };
-		91F47BF825D2D8D3003DF40A /* SUDateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUDateTextField.swift; sourceTree = "<group>"; };
-		91F47BF925D2D8D3003DF40A /* SUPasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUPasswordTextField.swift; sourceTree = "<group>"; };
 		91F47BFB25D2D8D3003DF40A /* MainTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
-		91F47BFD25D2D8D3003DF40A /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		91F47BFF25D2D8D3003DF40A /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		91F47C0025D2D8D3003DF40A /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		91F47C0225D2D8D3003DF40A /* BaseScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScrollViewController.swift; sourceTree = "<group>"; };
@@ -359,14 +354,6 @@
 		91F47C0D25D2D8D3003DF40A /* DoubleFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFormatter.swift; sourceTree = "<group>"; };
 		91F47C0E25D2D8D3003DF40A /* NLettersPercentFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLettersPercentFormatter.swift; sourceTree = "<group>"; };
 		91F47C0F25D2D8D3003DF40A /* AbbrevationFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbbrevationFormatter.swift; sourceTree = "<group>"; };
-		91F47C1125D2D8D3003DF40A /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		91F47C1225D2D8D3003DF40A /* PhoneNumberValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberValidator.swift; sourceTree = "<group>"; };
-		91F47C1325D2D8D3003DF40A /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		91F47C1425D2D8D3003DF40A /* TextValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
-		91F47C1525D2D8D3003DF40A /* DateOfBirthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateOfBirthValidator.swift; sourceTree = "<group>"; };
-		91F47C1625D2D8D3003DF40A /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		91F47C1725D2D8D3003DF40A /* PassportNumberValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportNumberValidator.swift; sourceTree = "<group>"; };
-		91F47C1825D2D8D3003DF40A /* CodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
 		91F47C1A25D2D8D3003DF40A /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		91F47C1B25D2D8D3003DF40A /* UIAlertController+CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+CustomView.swift"; sourceTree = "<group>"; };
 		91F47C1C25D2D8D3003DF40A /* UIColor+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
@@ -430,6 +417,21 @@
 		D1D274AD2642CD34009F08FC /* SmallRatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallRatingView.xib; sourceTree = "<group>"; };
 		D1E2E0B92698793900B72A34 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		D1E2E0BB26987CE000B72A34 /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
+		F40AB73C2A6557E300730883 /* SUTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUTextField.swift; sourceTree = "<group>"; };
+		F40AB73D2A6557E300730883 /* SUDateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUDateTextField.swift; sourceTree = "<group>"; };
+		F40AB73E2A6557E300730883 /* SUPasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUPasswordTextField.swift; sourceTree = "<group>"; };
+		F40AB7402A6557E300730883 /* MessageTextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTextInputView.xib; sourceTree = "<group>"; };
+		F40AB7412A6557E300730883 /* MessageTextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextInputView.swift; sourceTree = "<group>"; };
+		F40AB7482A6558C400730883 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		F40AB7492A6558C400730883 /* PhoneNumberValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberValidator.swift; sourceTree = "<group>"; };
+		F40AB74A2A6558C400730883 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		F40AB74B2A6558C400730883 /* TextValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
+		F40AB74C2A6558C400730883 /* DateOfBirthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateOfBirthValidator.swift; sourceTree = "<group>"; };
+		F40AB74D2A6558C400730883 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		F40AB74E2A6558C400730883 /* PassportNumberValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportNumberValidator.swift; sourceTree = "<group>"; };
+		F40AB74F2A6558C400730883 /* CodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
+		F40AB7592A6558CA00730883 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManagerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -915,7 +917,6 @@
 				91F47C3325D2D8D3003DF40A /* Services */,
 				91F47BF025D2D8D3003DF40A /* UI */,
 				32F18E4028D619A1009DF777 /* SwiftUIReusableUI */,
-				91F47C1025D2D8D3003DF40A /* Validators */,
 				91C00D0325D2C7D700FF97A2 /* RetouchCommon.h */,
 				91F47CA425D2F18F003DF40A /* Assets.xcassets */,
 				91C00D0425D2C7D700FF97A2 /* Info.plist */,
@@ -938,15 +939,6 @@
 				91C48260260CE6CC00750F65 /* DeepLinkHelper.swift */,
 			);
 			path = DeepLinkHelper;
-			sourceTree = "<group>";
-		};
-		91CF929325D53B65000D7130 /* MessageTextInputView */ = {
-			isa = PBXGroup;
-			children = (
-				91CF929425D53B65000D7130 /* MessageTextInputView.xib */,
-				91CF929525D53B65000D7130 /* MessageTextInputView.swift */,
-			);
-			path = MessageTextInputView;
 			sourceTree = "<group>";
 		};
 		91CF92DF25D56FAB000D7130 /* Models */ = {
@@ -1020,6 +1012,7 @@
 		91F47BF025D2D8D3003DF40A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F40AB73B2A6557E300730883 /* UIKitTextFields */,
 				D1548125275108E8002E8E46 /* BlureBackgroundView */,
 				D14594FB26690C16000EE7E6 /* DetailTagAlertView */,
 				D14594F62668F47C000EE7E6 /* DescriptionView */,
@@ -1037,9 +1030,7 @@
 				91B1E64525D804C7000E1486 /* ImagePresentableView */,
 				91F47BF125D2D8D3003DF40A /* MessageView */,
 				91F47BF425D2D8D3003DF40A /* Buttons */,
-				91F47BF625D2D8D3003DF40A /* TextFields */,
 				91F47BFA25D2D8D3003DF40A /* TabBarItem */,
-				91F47BFC25D2D8D3003DF40A /* CheckBox */,
 				91F47BFE25D2D8D3003DF40A /* HeaderView */,
 				9153ED2D260DD19600E4C83D /* AuthHeaderView */,
 				91F47C0125D2D8D3003DF40A /* Base */,
@@ -1066,23 +1057,12 @@
 				914A361825F66A3800A2D506 /* ReversePurpleButton.swift */,
 				91EF681025E6794600253BFC /* StatusButton.swift */,
 				91EF683A25E6930E00253BFC /* RedoButton.swift */,
-				91B1E66D25D82A24000E1486 /* BackButton.swift */,
+				91B1E66D25D82A24000E1486 /* BackButton1.swift */,
 				913833C125DD39CB001E3DBD /* CameraButton.swift */,
 				915C6AD225D9A05D00E74FD4 /* CloseButton.swift */,
 				91B1E67125D82C61000E1486 /* EyeButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		91F47BF625D2D8D3003DF40A /* TextFields */ = {
-			isa = PBXGroup;
-			children = (
-				91F47BF725D2D8D3003DF40A /* SUTextField.swift */,
-				91F47BF825D2D8D3003DF40A /* SUDateTextField.swift */,
-				91F47BF925D2D8D3003DF40A /* SUPasswordTextField.swift */,
-				91CF929325D53B65000D7130 /* MessageTextInputView */,
-			);
-			path = TextFields;
 			sourceTree = "<group>";
 		};
 		91F47BFA25D2D8D3003DF40A /* TabBarItem */ = {
@@ -1091,14 +1071,6 @@
 				91F47BFB25D2D8D3003DF40A /* MainTab.swift */,
 			);
 			path = TabBarItem;
-			sourceTree = "<group>";
-		};
-		91F47BFC25D2D8D3003DF40A /* CheckBox */ = {
-			isa = PBXGroup;
-			children = (
-				91F47BFD25D2D8D3003DF40A /* CheckBoxView.swift */,
-			);
-			path = CheckBox;
 			sourceTree = "<group>";
 		};
 		91F47BFE25D2D8D3003DF40A /* HeaderView */ = {
@@ -1142,21 +1114,6 @@
 				91F47C0F25D2D8D3003DF40A /* AbbrevationFormatter.swift */,
 			);
 			path = Formatters;
-			sourceTree = "<group>";
-		};
-		91F47C1025D2D8D3003DF40A /* Validators */ = {
-			isa = PBXGroup;
-			children = (
-				91F47C1125D2D8D3003DF40A /* EmailValidator.swift */,
-				91F47C1225D2D8D3003DF40A /* PhoneNumberValidator.swift */,
-				91F47C1325D2D8D3003DF40A /* Validator.swift */,
-				91F47C1425D2D8D3003DF40A /* TextValidator.swift */,
-				91F47C1525D2D8D3003DF40A /* DateOfBirthValidator.swift */,
-				91F47C1625D2D8D3003DF40A /* PasswordValidator.swift */,
-				91F47C1725D2D8D3003DF40A /* PassportNumberValidator.swift */,
-				91F47C1825D2D8D3003DF40A /* CodeValidator.swift */,
-			);
-			path = Validators;
 			sourceTree = "<group>";
 		};
 		91F47C1925D2D8D3003DF40A /* Extensions */ = {
@@ -1240,6 +1197,7 @@
 		91F47C3325D2D8D3003DF40A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				91F47C3625D2D8D3003DF40A /* RestApiManager */,
 				D14EEBDB287C68D900528A16 /* AdMob */,
 				D14EEBD7287C67B800528A16 /* Feedback */,
 				D14EEBD8287C681700528A16 /* EarnCreditsService */,
@@ -1257,7 +1215,6 @@
 				913833C725DD3CE8001E3DBD /* CameraPresenter */,
 				917A9D2B25DC2F8F006E8963 /* PHImageLoader */,
 				91F47C3425D2D8D3003DF40A /* KeychainService */,
-				91F47C3625D2D8D3003DF40A /* RestApi */,
 				91DFB65B2606780E00B0F199 /* ReachabilityService */,
 				91B4FA6E260692E000B58A34 /* Constants */,
 			);
@@ -1272,16 +1229,17 @@
 			path = KeychainService;
 			sourceTree = "<group>";
 		};
-		91F47C3625D2D8D3003DF40A /* RestApi */ = {
+		91F47C3625D2D8D3003DF40A /* RestApiManager */ = {
 			isa = PBXGroup;
 			children = (
+				F46593992A6E859100BE9BB5 /* Mock */,
 				91F47C3725D2D8D3003DF40A /* RestApiConstants */,
 				91F47C3925D2D8D3003DF40A /* RestApiMethods */,
 				91F47C4025D2D8D3003DF40A /* RestApiParameters */,
 				91F47C4825D2D8D3003DF40A /* RestApiHeaders */,
 				91F47C4A25D2D8D3003DF40A /* RestApiErrors */,
 			);
-			path = RestApi;
+			path = RestApiManager;
 			sourceTree = "<group>";
 		};
 		91F47C3725D2D8D3003DF40A /* RestApiConstants */ = {
@@ -1537,6 +1495,59 @@
 			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
+		F40AB73B2A6557E300730883 /* UIKitTextFields */ = {
+			isa = PBXGroup;
+			children = (
+				F40AB7582A6558CA00730883 /* CheckBox */,
+				F40AB7472A6558C400730883 /* Validators */,
+				F40AB73C2A6557E300730883 /* SUTextField.swift */,
+				F40AB73D2A6557E300730883 /* SUDateTextField.swift */,
+				F40AB73E2A6557E300730883 /* SUPasswordTextField.swift */,
+				F40AB73F2A6557E300730883 /* MessageTextInputView */,
+			);
+			path = UIKitTextFields;
+			sourceTree = "<group>";
+		};
+		F40AB73F2A6557E300730883 /* MessageTextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				F40AB7402A6557E300730883 /* MessageTextInputView.xib */,
+				F40AB7412A6557E300730883 /* MessageTextInputView.swift */,
+			);
+			path = MessageTextInputView;
+			sourceTree = "<group>";
+		};
+		F40AB7472A6558C400730883 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				F40AB7482A6558C400730883 /* EmailValidator.swift */,
+				F40AB7492A6558C400730883 /* PhoneNumberValidator.swift */,
+				F40AB74A2A6558C400730883 /* Validator.swift */,
+				F40AB74B2A6558C400730883 /* TextValidator.swift */,
+				F40AB74C2A6558C400730883 /* DateOfBirthValidator.swift */,
+				F40AB74D2A6558C400730883 /* PasswordValidator.swift */,
+				F40AB74E2A6558C400730883 /* PassportNumberValidator.swift */,
+				F40AB74F2A6558C400730883 /* CodeValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		F40AB7582A6558CA00730883 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				F40AB7592A6558CA00730883 /* CheckBoxView.swift */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		F46593992A6E859100BE9BB5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1635,6 +1646,7 @@
 				D154812927511139002E8E46 /* BlureBackgroundView.xib in Resources */,
 				9191DF0025FA6CB000BA2AEF /* ToastView.xib in Resources */,
 				D1D274AE2642CD34009F08FC /* SmallRatingView.xib in Resources */,
+				F40AB7452A6557E400730883 /* MessageTextInputView.xib in Resources */,
 				91B1E64D25D804E1000E1486 /* ImagePresentableView.xib in Resources */,
 				9195BCFE25D6CF08006D3379 /* BalanceView.xib in Resources */,
 				D14594FA2668F4CB000EE7E6 /* DescriptionView.xib in Resources */,
@@ -1644,7 +1656,6 @@
 				917A9D0F25DC039B006E8963 /* LongTapTutorialView.xib in Resources */,
 				9153ED35260DD1BA00E4C83D /* AuthHeaderView.xib in Resources */,
 				32F18E3428D61949009DF777 /* Colors.xcassets in Resources */,
-				91CF929625D53B65000D7130 /* MessageTextInputView.xib in Resources */,
 				91F47C4C25D2D8D3003DF40A /* MessageView.xib in Resources */,
 				91E3C3D7261DE652004A7856 /* RTAlertContentView.xib in Resources */,
 				91F47CA525D2F18F003DF40A /* Assets.xcassets in Resources */,
@@ -1699,17 +1710,14 @@
 				914A361925F66A3800A2D506 /* ReversePurpleButton.swift in Sources */,
 				9153ED5F260DE61C00E4C83D /* UIViewController+StatusBar.swift in Sources */,
 				917A9D0925DC0390006E8963 /* LongTapTutorialView.swift in Sources */,
-				91F47C6825D2D8D3003DF40A /* CodeValidator.swift in Sources */,
 				D1B7023826935CC80086C30F /* FeedbackService.swift in Sources */,
 				91EF681125E6794600253BFC /* StatusButton.swift in Sources */,
 				91F47C8A25D2D8D3003DF40A /* RestApiMethod+Headers.swift in Sources */,
-				91F47C5325D2D8D3003DF40A /* CheckBoxView.swift in Sources */,
 				D14594F82668F496000EE7E6 /* DescriptionView.swift in Sources */,
 				913833D025DD4D29001E3DBD /* PHPhotoLibraryPresenter.swift in Sources */,
 				91F47C6025D2D8D3003DF40A /* AbbrevationFormatter.swift in Sources */,
 				D154812727510917002E8E46 /* BlureBackgroundView.swift in Sources */,
 				9195BCF825D6CF02006D3379 /* BalanceView.swift in Sources */,
-				91F47C5125D2D8D3003DF40A /* SUPasswordTextField.swift in Sources */,
 				32F18E5328D61E00009DF777 /* BalanceSwiftViewModel.swift in Sources */,
 				91BC4DC725E3C12D00D25A09 /* DeviceIdService.swift in Sources */,
 				91F47C5825D2D8D3003DF40A /* BaseSelectableView.swift in Sources */,
@@ -1718,27 +1726,32 @@
 				9153ED2F260DD1AE00E4C83D /* AuthHeaderView.swift in Sources */,
 				91F47C7225D2D8D3003DF40A /* NotificationBannerHelper.swift in Sources */,
 				91F47C5925D2D8D3003DF40A /* BaseTapableView.swift in Sources */,
-				91F47C6425D2D8D3003DF40A /* TextValidator.swift in Sources */,
+				F40AB7552A6558C400730883 /* PasswordValidator.swift in Sources */,
 				9153215C25FB963600116A9A /* User.swift in Sources */,
+				F40AB7512A6558C400730883 /* PhoneNumberValidator.swift in Sources */,
 				9112A815260A36DE00042B65 /* PushNotificationService.swift in Sources */,
 				915C6AD325D9A05D00E74FD4 /* CloseButton.swift in Sources */,
 				91DFB63626062D1300B0F199 /* DataLoader.swift in Sources */,
 				91EE321126204C620069327F /* GemsRestApiMethods.swift in Sources */,
+				F40AB7442A6557E400730883 /* SUPasswordTextField.swift in Sources */,
 				32879A2F28FEC92C00F117AA /* PriceSwiftView.swift in Sources */,
 				D1252AA428B1086C00708846 /* ReviewByURLService.swift in Sources */,
 				917A9D2D25DC2F98006E8963 /* PHImageLoader.swift in Sources */,
+				F40AB7432A6557E400730883 /* SUDateTextField.swift in Sources */,
 				91B56B3A263169B900EEB738 /* IAPProduct.swift in Sources */,
 				9159C30A2632D347003DCB4B /* CurrentUserLoader.swift in Sources */,
 				91CF929B25D53D6E000D7130 /* UIScrollView+ToBottom.swift in Sources */,
 				D1B7022E26930F6A0086C30F /* StoreKitService.swift in Sources */,
 				91CF92E525D57049000D7130 /* RetouchTag.swift in Sources */,
+				F40AB7562A6558C400730883 /* PassportNumberValidator.swift in Sources */,
 				D14727D7279D9F1900D7E6B1 /* UIImageView+LoadByURL.swift in Sources */,
 				91F47C7A25D2D8D3003DF40A /* BaseCoordinatorDelegate.swift in Sources */,
 				913833C925DD3D09001E3DBD /* CameraPresenter.swift in Sources */,
-				91CF929725D53B65000D7130 /* MessageTextInputView.swift in Sources */,
+				F40AB7542A6558C400730883 /* DateOfBirthValidator.swift in Sources */,
 				91F47C8625D2D8D3003DF40A /* AuthParameters.swift in Sources */,
 				91F47C8025D2D8D3003DF40A /* AuthRestApiMethods.swift in Sources */,
 				91F47C7325D2D8D3003DF40A /* DateHelper.swift in Sources */,
+				F40AB7462A6557E400730883 /* MessageTextInputView.swift in Sources */,
 				91F47C7E25D2D8D3003DF40A /* OrderRestApiMethods.swift in Sources */,
 				91F47C8B25D2D8D3003DF40A /* CustomRestApiError.swift in Sources */,
 				9112A81B260A390800042B65 /* UpdatePushNotificationTokenParameters.swift in Sources */,
@@ -1750,14 +1763,15 @@
 				D14EEBDA287C682500528A16 /* EarnCreditsService.swift in Sources */,
 				919E8CF026050927007114EE /* UIStackView+RemoveAllArrangeSubviews.swift in Sources */,
 				D185D9EC280D12A400CC4F1E /* DescriptionViewHolder.swift in Sources */,
+				F40AB7422A6557E400730883 /* SUTextField.swift in Sources */,
 				D1C76B1927A4184E0068379A /* AutoRemovePhotoService.swift in Sources */,
 				32F18E4A28D619A2009DF777 /* ExpandableSwiftView.swift in Sources */,
 				D135AA4C266F598F0030AC23 /* SelectedRetouchTag.swift in Sources */,
+				F465939B2A6E859B00BE9BB5 /* RestApiManagerMock.swift in Sources */,
 				9191DEFF25FA6CB000BA2AEF /* ToastView.swift in Sources */,
 				9149EC0025EAB0C5003DE692 /* GemPricingPlan.swift in Sources */,
 				91B1E68D25D84780000E1486 /* PurpleButton.swift in Sources */,
 				91C48261260CE6CC00750F65 /* DeepLinkHelper.swift in Sources */,
-				91F47C6725D2D8D3003DF40A /* PassportNumberValidator.swift in Sources */,
 				D14594FD26690C2B000EE7E6 /* DetailTagAlertViewController.swift in Sources */,
 				32DDCC8828D8ABF400036CF0 /* GalleryView.swift in Sources */,
 				9191DEF525FA3B8000BA2AEF /* ImageSaver.swift in Sources */,
@@ -1766,16 +1780,15 @@
 				91F47C6D25D2D8D3003DF40A /* Date+Extensions.swift in Sources */,
 				915C6A9625D954F200E74FD4 /* OrdersLoader.swift in Sources */,
 				32F18E4928D619A2009DF777 /* HeaderSwiftView.swift in Sources */,
-				91F47C6625D2D8D3003DF40A /* PasswordValidator.swift in Sources */,
 				D128B4792645500700407B49 /* OrderStatusChangedNotificationModel.swift in Sources */,
 				91F47C5D25D2D8D3003DF40A /* DecimalFormatter.swift in Sources */,
 				913833E725DD75A9001E3DBD /* BaseBalanceCoordinatorDelegate.swift in Sources */,
-				91B1E66E25D82A24000E1486 /* BackButton.swift in Sources */,
+				91B1E66E25D82A24000E1486 /* BackButton1.swift in Sources */,
+				F40AB7502A6558C400730883 /* EmailValidator.swift in Sources */,
 				9149EBFC25EA9631003DE692 /* PresentableRetouchGroup.swift in Sources */,
 				D1252A9F28B0DFFA00708846 /* SilentOrdersLoader.swift in Sources */,
 				91B1E64725D804DA000E1486 /* ImagePresentableView.swift in Sources */,
 				91F47C5725D2D8D3003DF40A /* BaseCustomView.swift in Sources */,
-				91F47C4F25D2D8D3003DF40A /* SUTextField.swift in Sources */,
 				91EF683F25E6953800253BFC /* ImageInfoContainerViewModel.swift in Sources */,
 				91E3C3DE261DE6F9004A7856 /* RTAlertAction.swift in Sources */,
 				D1D274AC2642CCD8009F08FC /* SmallRatingView.swift in Sources */,
@@ -1788,6 +1801,7 @@
 				9191DEEE25FA38F600BA2AEF /* ShareHelper.swift in Sources */,
 				91F47C6B25D2D8D3003DF40A /* UIColor+Style.swift in Sources */,
 				9195BD0425D6D8F1006D3379 /* UIViewController+Child.swift in Sources */,
+				F40AB7522A6558C400730883 /* Validator.swift in Sources */,
 				D128B47B264593A500407B49 /* ClearButton.swift in Sources */,
 				91EF683B25E6930E00253BFC /* RedoButton.swift in Sources */,
 				91F47C4D25D2D8D3003DF40A /* MessageView.swift in Sources */,
@@ -1797,6 +1811,7 @@
 				32B3DD0729029ED0002D5BBD /* Triangle.swift in Sources */,
 				915C6A6D25D94D4400E74FD4 /* Order.swift in Sources */,
 				91F47C7625D2D8D3003DF40A /* ActivityIndicatorHelper.swift in Sources */,
+				F40AB75A2A6558CA00730883 /* CheckBoxView.swift in Sources */,
 				91F47C6A25D2D8D3003DF40A /* UIAlertController+CustomView.swift in Sources */,
 				91F47C5C25D2D8D3003DF40A /* NLettersAbbrevationFormatter.swift in Sources */,
 				91F47C7825D2D8D3003DF40A /* ActivityIndicatorView.swift in Sources */,
@@ -1810,13 +1825,10 @@
 				91D186932630042E001849A1 /* BalanceInfoView.swift in Sources */,
 				D14594F52668E7F9000EE7E6 /* TriangleView.swift in Sources */,
 				D128B47726454F4200407B49 /* PushNotificationModel.swift in Sources */,
-				91F47C6525D2D8D3003DF40A /* DateOfBirthValidator.swift in Sources */,
 				91F47C5B25D2D8D3003DF40A /* PercentFormatter.swift in Sources */,
 				913833B125DD1FDA001E3DBD /* PlaceholderView.swift in Sources */,
 				910483B725E931A5003DAA47 /* RetouchGroupRestApiMethods.swift in Sources */,
-				91F47C6225D2D8D3003DF40A /* PhoneNumberValidator.swift in Sources */,
 				91F47C8525D2D8D3003DF40A /* OrderParameters.swift in Sources */,
-				91F47C6325D2D8D3003DF40A /* Validator.swift in Sources */,
 				91CF929F25D543D5000D7130 /* BaseKeyboardObservableViewController.swift in Sources */,
 				D14EEBF1287C6FE200528A16 /* KeychainBacked.swift in Sources */,
 				91F47C6E25D2D8D3003DF40A /* ReusableCell.swift in Sources */,
@@ -1827,6 +1839,7 @@
 				32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */,
 				91F47C7C25D2D8D3003DF40A /* RestApiConstants.swift in Sources */,
 				32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */,
+				F40AB7532A6558C400730883 /* TextValidator.swift in Sources */,
 				91EE320B26204BF20069327F /* GemsParameters.swift in Sources */,
 				913833C225DD39CB001E3DBD /* CameraButton.swift in Sources */,
 				D13CDE6B263ACE9B000FD01B /* RatingView.swift in Sources */,
@@ -1837,10 +1850,9 @@
 				9191DEFE25FA6CB000BA2AEF /* ToastHelper.swift in Sources */,
 				913833BC25DD367E001E3DBD /* SettingsHelper.swift in Sources */,
 				915115D8260119B6006FCD60 /* NotificationCenterHelper.swift in Sources */,
-				91F47C5025D2D8D3003DF40A /* SUDateTextField.swift in Sources */,
+				F40AB7572A6558C400730883 /* CodeValidator.swift in Sources */,
 				D1E2E0BA2698793900B72A34 /* UserDefaultsBacked.swift in Sources */,
 				32F18E4E28D619A2009DF777 /* BackSwiftButton.swift in Sources */,
-				91F47C6125D2D8D3003DF40A /* EmailValidator.swift in Sources */,
 				D10E201A268B3A1500811CDB /* AnalyticsService.swift in Sources */,
 				91B1E66125D80A5E000E1486 /* ImageInfoContainerView.swift in Sources */,
 				91B1E65625D80938000E1486 /* BeforeAfterImagePresentableView.swift in Sources */,

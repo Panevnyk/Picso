@@ -1,6 +1,6 @@
 //
 //  User.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 12.11.2020.
 //

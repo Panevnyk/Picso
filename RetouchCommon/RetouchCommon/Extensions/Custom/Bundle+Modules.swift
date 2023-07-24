@@ -1,6 +1,6 @@
 //
-//  Bundle+HotelionCommon.swift
-//  HotelionCommon
+//  Bundle+RetouchCommon.swift
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 11.11.2020.
 //

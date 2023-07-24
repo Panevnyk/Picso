@@ -7,109 +7,115 @@
 
 import UIKit
 import RetouchAuth
+import SwiftUI
 
-final class FastSigninAssembly {
-    var viewController: FastSigninViewController
-    var viewModel: FastSigninViewModelProtocol
+final class StartingTutorialAssembly {
+    let viewController: UIViewController
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let viewModel = FastSigninViewModel(
-            restApiManager: serviceFactory.makeRestApiManager()
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: AStartingTutorialViewCoordinatorDelegate?
+    ) {
+        let viewModel = AStartingTutorialViewModel(
+            coordinatorDelegate: coordinatorDelegate
         )
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "FastSigninViewController") as! FastSigninViewController
-        viewController.viewModel = viewModel
+        let view = AStartingTutorialView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
 
         self.viewController = viewController
-        self.viewModel = viewModel
+    }
+}
+
+final class FastSigninAssembly {
+    let viewController: UIViewController
+
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: AFastSignInViewCoordinatorDelegate?
+    ) {
+        let viewModel = AFastSignInViewModel(
+            restApiManager: serviceFactory.makeRestApiManager(),
+            coordinatorDelegate: coordinatorDelegate
+        )
+        let view = AFastSignInView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
+
+        self.viewController = viewController
     }
 }
 
 final class LoginAssembly {
-    let viewModel: LoginViewModelProtocol
-    var viewController: LoginViewController
+    let viewController: UIViewController
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let viewModel = LoginViewModel(
-            restApiManager: serviceFactory.makeRestApiManager()
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        defaultEmail: String?,
+        coordinatorDelegate: ALoginViewCoordinatorDelegate?
+    ) {
+        let viewModel = ALoginViewModel(
+            restApiManager: serviceFactory.makeRestApiManager(),
+            defaultEmail: defaultEmail,
+            coordinatorDelegate: coordinatorDelegate
         )
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        viewController.viewModel = viewModel
+        let view = ALoginView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
 
-        self.viewModel = viewModel
         self.viewController = viewController
     }
 }
 
 final class RegistrationAssembly {
-    let viewModel: RegisterViewModelProtocol
-    var viewController: RegistrationViewController
+    let viewController: UIViewController
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let viewModel = RegisterViewModel(
-            restApiManager: serviceFactory.makeRestApiManager()
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: ARegistrationViewCoordinatorDelegate?
+    ) {
+        let viewModel = ARegisterationViewModel(
+            restApiManager: serviceFactory.makeRestApiManager(),
+            coordinatorDelegate: coordinatorDelegate
         )
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
-        viewController.viewModel = viewModel
+        let view = ARegisterationView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
 
-        self.viewModel = viewModel
         self.viewController = viewController
     }
 }
 
 final class ForgotPasswordAssembly {
-    let viewModel: ForgotPasswordViewModelProtocol
-    var viewController: ForgotPasswordViewController
+    let viewController: UIViewController
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let viewModel = ForgotPasswordViewModel(
-            restApiManager: serviceFactory.makeRestApiManager()
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: AForgotPasswordViewCoordinatorDelegate?
+    ) {
+        let viewModel = AForgotPasswordViewModel(
+            restApiManager: serviceFactory.makeRestApiManager(),
+            coordinatorDelegate: coordinatorDelegate
         )
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
-        viewController.viewModel = viewModel
+        let view = AForgotPasswordView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
 
-        self.viewModel = viewModel
         self.viewController = viewController
     }
 }
 
 final class ResetPasswordAssembly {
-    let viewModel: ResetPasswordViewModelProtocol
-    var viewController: ResetPasswordViewController
-
-    init(serviceFactory: ServiceFactoryProtocol, resetPasswordToken: String) {
-        let viewModel = ResetPasswordViewModel(resetPasswordToken: resetPasswordToken,
-                                               restApiManager: serviceFactory.makeRestApiManager())
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ResetPasswordViewController") as! ResetPasswordViewController
-        viewController.viewModel = viewModel
-
-        self.viewModel = viewModel
-        self.viewController = viewController
-    }
-}
-
-final class StartingTutorialAssembly {
-    var viewController: StartingTutorialViewController
-
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "StartingTutorialViewController") as! StartingTutorialViewController
-
-        self.viewController = viewController
-    }
-}
-
-final class ImageAssembly {
-    var viewController: ImageViewController
-
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.auth)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
-
+    let viewController: UIViewController
+    
+    init(
+        resetPasswordToken: String,
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: AResetPasswordViewCoordinatorDelegate?
+    ) {
+        let viewModel = AResetPasswordViewModel(
+            resetPasswordToken: resetPasswordToken,
+            restApiManager: serviceFactory.makeRestApiManager(),
+            coordinatorDelegate: coordinatorDelegate
+        )
+        let view = AResetPasswordView(viewModel: viewModel)
+        let viewController = UIHostingController(rootView: view)
+        
         self.viewController = viewController
     }
 }

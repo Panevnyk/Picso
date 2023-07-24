@@ -1,6 +1,6 @@
 //
 //  UIView+Shadow.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 19.11.2020.
 //

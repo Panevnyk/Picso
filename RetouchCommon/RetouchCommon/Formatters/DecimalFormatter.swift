@@ -1,6 +1,6 @@
 //
 //  DecimalFormatter.swift
-//  Hotelion
+//  Retouch
 //
 //  Created by Vladyslav Panevnyk on 18.04.18.
 

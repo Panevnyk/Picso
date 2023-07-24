@@ -1,6 +1,6 @@
 //
 //  UIAlertController+CustomView.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 29.01.2021.
 //

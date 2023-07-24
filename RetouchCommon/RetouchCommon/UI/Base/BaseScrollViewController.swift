@@ -1,6 +1,6 @@
 //
 //  BaseScrollViewController.swift
-//  HotelionCommon
+//  RetouchCommon
 //
 //  Created by Vladyslav Panevnyk on 11.11.2020.
 //
