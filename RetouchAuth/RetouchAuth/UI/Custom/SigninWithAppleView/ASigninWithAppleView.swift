@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetouchCommon
 
 public struct ASigninWithAppleView: UIViewRepresentable {
     public typealias UIViewType = AUIKitSigninWithAppleView
