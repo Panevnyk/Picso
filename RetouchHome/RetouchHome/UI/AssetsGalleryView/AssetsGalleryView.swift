@@ -1,23 +1,24 @@
 //
-//  PhotoGalleryView.swift
-//  RetouchCommon
+//  AssetsGalleryView.swift
+//  RetouchHome
 //
 //  Created by Vladyslav Panevnyk on 19.09.2022.
 //
 
 import SwiftUI
 import Photos
+import RetouchCommon
 
-public struct GalleryView: View {
+public struct AssetsGalleryView: View {
     private static let spacing: CGFloat = 2
 
     private let assets: PHFetchResult<PHAsset>
     private var action: (_ asset: PHAsset) -> Void
 
     private let columns = [
-        GridItem(spacing: GalleryView.spacing),
-        GridItem(spacing: GalleryView.spacing),
-        GridItem(spacing: GalleryView.spacing)
+        GridItem(spacing: AssetsGalleryView.spacing),
+        GridItem(spacing: AssetsGalleryView.spacing),
+        GridItem(spacing: AssetsGalleryView.spacing)
     ]
     
     private var targetSize: CGSize {
@@ -26,14 +27,15 @@ public struct GalleryView: View {
     }
 
     public init(assets: PHFetchResult<PHAsset>,
-                action: @escaping (_ asset: PHAsset) -> Void) {
+                action: @escaping (_ asset: PHAsset) -> Void
+    ) {
         self.assets = assets
         self.action = action
     }
 
     public var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: GalleryView.spacing) {
+            LazyVGrid(columns: columns, spacing: AssetsGalleryView.spacing) {
                 ForEach(0 ..< assets.count, id: \.self) { index in
                     AssetImage(
                         asset: assets[index],
@@ -48,6 +50,6 @@ public struct GalleryView: View {
                 }
             }
         }
-        .padding([.all], GalleryView.spacing)
+        .padding([.all], AssetsGalleryView.spacing)
     }
 }

@@ -1,6 +1,6 @@
 //
 //  AssetImage.swift
-//  RetouchCommon
+//  RetouchHome
 //
 //  Created by Vladyslav Panevnyk on 19.09.2022.
 //

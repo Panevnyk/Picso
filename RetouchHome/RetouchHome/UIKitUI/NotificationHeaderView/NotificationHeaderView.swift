@@ -17,7 +17,7 @@ final class NotificationHeaderView: UICollectionReusableView {
     }
     
     // MARK: - setup
-    func setup(viewModel: NotificationViewModel) {
+    func setup(viewModel: NotificationBannerViewModel) {
         notificationView.setup(viewModel: viewModel)
     }
 }

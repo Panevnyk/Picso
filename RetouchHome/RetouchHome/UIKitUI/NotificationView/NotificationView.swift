@@ -38,7 +38,7 @@ final class NotificationView: BaseCustomView {
     }
     
     // MARK: - Setup
-    func setup(viewModel: NotificationViewModel) {
+    func setup(viewModel: NotificationBannerViewModel) {
         titleLabel.text = viewModel.notificationTitle
         if let attributedNotificationDescription = viewModel.attributedNotificationDescription {
             descriptionLabel.attributedText = attributedNotificationDescription

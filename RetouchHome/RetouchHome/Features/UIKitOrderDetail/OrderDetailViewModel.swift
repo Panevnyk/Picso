@@ -7,6 +7,7 @@
 
 import RestApiManager
 import RetouchCommon
+import RxSwift
 
 public protocol OrderDetailViewModelProtocol {
     var title: String { get set }
@@ -43,10 +44,12 @@ public extension OrderDetailViewModelProtocol {
 public class OrderDetailViewModel: OrderDetailViewModelProtocol {
     private let ordersLoader: OrdersLoaderProtocol
     private let feedbackService: FeedbackServiceProtocol
-    private let retouchGroups: [RetouchGroup]
+    private let retouchGroupsLoader: RetouchGroupsLoaderProtocol
     private var order: Order {
         didSet { orderDidChange() }
     }
+    
+    private var retouchGroups: [RetouchGroup] = []
 
     public var title: String = ""
     public var description: String = ""
@@ -56,22 +59,37 @@ public class OrderDetailViewModel: OrderDetailViewModelProtocol {
     public var idRedoAvailable: Bool = false
     public var rating: Int? = nil
     public var isNeedToShowRating: Bool = false
-
+    
     public var imageAfter: String = ""
     public var imageBefore: String = ""
-
+    
+    private let disposeBag = DisposeBag()
+    
     public init(ordersLoader: OrdersLoaderProtocol,
+                retouchGroupsLoader: RetouchGroupsLoaderProtocol,
                 feedbackService: FeedbackServiceProtocol,
-                retouchGroups: [RetouchGroup],
                 order: Order) {
         self.ordersLoader = ordersLoader
+        self.retouchGroupsLoader = retouchGroupsLoader
         self.feedbackService = feedbackService
-        self.retouchGroups = retouchGroups
         self.order = order
         
+        bindData()
         orderDidChange()
     }
-    
+}
+
+// MARK: - Bind
+extension OrderDetailViewModel {
+    public func bindData() {
+        retouchGroupsLoader.retouchGroupsPublisher
+            .bind { (retouchGroups) in
+                self.retouchGroups = retouchGroups
+            }.disposed(by: disposeBag)
+    }
+}
+// MARK: - Private
+extension OrderDetailViewModel {
     private func orderDidChange() {
         let presentableValue = order
             .makePresentableTitleAndDescription(retouchGroups: retouchGroups)

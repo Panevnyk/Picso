@@ -73,7 +73,7 @@ private extension HomeViewController {
 // MARK: - HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
     public func presentHomeHistory() {
-        guard (childViewController as? HomeHistoryViewController) == nil else { return }
+        guard (childViewController as? HomeHistoryViewHosting) == nil else { return }
         coordinatorDelegate?.setHomeHistory(from: self)
     }
 

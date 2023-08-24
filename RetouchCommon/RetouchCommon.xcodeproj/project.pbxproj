@@ -13,8 +13,6 @@
 		32B3DD0729029ED0002D5BBD /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD0629029ED0002D5BBD /* Triangle.swift */; };
 		32B3DD20290BCAB8002D5BBD /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B3DD1F290BCAB8002D5BBD /* OrderButton.swift */; };
 		32D1F02D28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */; };
-		32DDCC8828D8ABF400036CF0 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDCC8728D8ABF400036CF0 /* GalleryView.swift */; };
-		32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDCC8928D8B03900036CF0 /* AssetImage.swift */; };
 		32F18E3228D61949009DF777 /* SwiftUIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E2F28D61948009DF777 /* SwiftUIFont+Style.swift */; };
 		32F18E3428D61949009DF777 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F18E2D28D61948009DF777 /* Colors.xcassets */; };
 		32F18E3728D61949009DF777 /* SwiftUIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F18E2E28D61948009DF777 /* SwiftUIColor+Style.swift */; };
@@ -196,6 +194,10 @@
 		F40AB7572A6558C400730883 /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74F2A6558C400730883 /* CodeValidator.swift */; };
 		F40AB75A2A6558CA00730883 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7592A6558CA00730883 /* CheckBoxView.swift */; };
 		F465939B2A6E859B00BE9BB5 /* RestApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */; };
+		F489F4912A97500100783C1C /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F4902A97500100783C1C /* PhotoButton.swift */; };
+		F4BEE1902A96306200569DB9 /* StatusBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */; };
+		F4BEE1922A96392800569DB9 /* GalleryPhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */; };
+		F4D449742A740D21002EA5B3 /* LoadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D449732A740D21002EA5B3 /* LoadableImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,8 +247,6 @@
 		32B3DD0629029ED0002D5BBD /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		32B3DD1F290BCAB8002D5BBD /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		32D1F02C28F57CE5003B1849 /* HostingViewControllerWithoutNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewControllerWithoutNavBar.swift; sourceTree = "<group>"; };
-		32DDCC8728D8ABF400036CF0 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		32DDCC8928D8B03900036CF0 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
 		32F18E2928D61948009DF777 /* View+IsHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
 		32F18E2D28D61948009DF777 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		32F18E2E28D61948009DF777 /* SwiftUIColor+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUIColor+Style.swift"; sourceTree = "<group>"; };
@@ -432,6 +432,10 @@
 		F40AB74F2A6558C400730883 /* CodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
 		F40AB7592A6558CA00730883 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManagerMock.swift; sourceTree = "<group>"; };
+		F489F4902A97500100783C1C /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
+		F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadgeView.swift; sourceTree = "<group>"; };
+		F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoButton.swift; sourceTree = "<group>"; };
+		F4D449732A740D21002EA5B3 /* LoadableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,15 +512,6 @@
 				32F18E4128D619A1009DF777 /* ExpandableSwiftView.swift */,
 			);
 			path = HeaderSwiftView;
-			sourceTree = "<group>";
-		};
-		32409CF928EDA4CD00C65C13 /* GalleryView */ = {
-			isa = PBXGroup;
-			children = (
-				32DDCC8728D8ABF400036CF0 /* GalleryView.swift */,
-				32DDCC8928D8B03900036CF0 /* AssetImage.swift */,
-			);
-			path = GalleryView;
 			sourceTree = "<group>";
 		};
 		32409CFA28EDA4DC00C65C13 /* BackSwiftButton */ = {
@@ -613,16 +608,15 @@
 		32F18E4028D619A1009DF777 /* SwiftUIReusableUI */ = {
 			isa = PBXGroup;
 			children = (
-				32B3DD1E290BCAAA002D5BBD /* OrderButton */,
+				F4BEE1952A96397E00569DB9 /* Images */,
+				F4BEE1942A96395600569DB9 /* Buttons */,
+				F4BEE18E2A96305800569DB9 /* StatusBadgeView */,
 				32B3DD0529029EC2002D5BBD /* Triangle */,
-				32879A3128FEEB7200F117AA /* ScrollableImage */,
-				32D1F02B28F57CC5003B1849 /* HostingViewControllerWithoutNavBar */,
 				32409CFB28EDC04100C65C13 /* PopupView */,
 				32409CF828EDA4B300C65C13 /* HeaderSwiftView */,
 				32F18E5128D61DF4009DF777 /* BalanceSwiftView */,
-				32409CFA28EDA4DC00C65C13 /* BackSwiftButton */,
-				32409CF928EDA4CD00C65C13 /* GalleryView */,
 				32879A3028FEC92F00F117AA /* PriceSwiftView */,
+				32D1F02B28F57CC5003B1849 /* HostingViewControllerWithoutNavBar */,
 			);
 			path = SwiftUIReusableUI;
 			sourceTree = "<group>";
@@ -1548,6 +1542,58 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		F489F48F2A974FF000783C1C /* PhotoButton */ = {
+			isa = PBXGroup;
+			children = (
+				F489F4902A97500100783C1C /* PhotoButton.swift */,
+			);
+			path = PhotoButton;
+			sourceTree = "<group>";
+		};
+		F4BEE18E2A96305800569DB9 /* StatusBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */,
+			);
+			path = StatusBadgeView;
+			sourceTree = "<group>";
+		};
+		F4BEE1932A96393700569DB9 /* GalleryPhotoButton */ = {
+			isa = PBXGroup;
+			children = (
+				F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */,
+			);
+			path = GalleryPhotoButton;
+			sourceTree = "<group>";
+		};
+		F4BEE1942A96395600569DB9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				32B3DD1E290BCAAA002D5BBD /* OrderButton */,
+				32409CFA28EDA4DC00C65C13 /* BackSwiftButton */,
+				F4BEE1932A96393700569DB9 /* GalleryPhotoButton */,
+				F489F48F2A974FF000783C1C /* PhotoButton */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F4BEE1952A96397E00569DB9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4D449722A740D11002EA5B3 /* LoadableImage */,
+				32879A3128FEEB7200F117AA /* ScrollableImage */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F4D449722A740D11002EA5B3 /* LoadableImage */ = {
+			isa = PBXGroup;
+			children = (
+				F4D449732A740D21002EA5B3 /* LoadableImage.swift */,
+			);
+			path = LoadableImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1719,6 +1765,7 @@
 				D154812727510917002E8E46 /* BlureBackgroundView.swift in Sources */,
 				9195BCF825D6CF02006D3379 /* BalanceView.swift in Sources */,
 				32F18E5328D61E00009DF777 /* BalanceSwiftViewModel.swift in Sources */,
+				F4BEE1902A96306200569DB9 /* StatusBadgeView.swift in Sources */,
 				91BC4DC725E3C12D00D25A09 /* DeviceIdService.swift in Sources */,
 				91F47C5825D2D8D3003DF40A /* BaseSelectableView.swift in Sources */,
 				D10E201C268B4A0A00811CDB /* Constants+Analytics.swift in Sources */,
@@ -1773,7 +1820,6 @@
 				91B1E68D25D84780000E1486 /* PurpleButton.swift in Sources */,
 				91C48261260CE6CC00750F65 /* DeepLinkHelper.swift in Sources */,
 				D14594FD26690C2B000EE7E6 /* DetailTagAlertViewController.swift in Sources */,
-				32DDCC8828D8ABF400036CF0 /* GalleryView.swift in Sources */,
 				9191DEF525FA3B8000BA2AEF /* ImageSaver.swift in Sources */,
 				91E3C411261DEF8B004A7856 /* RTAlertContentView.swift in Sources */,
 				91DFB656260676CF00B0F199 /* ReachabilityService.swift in Sources */,
@@ -1783,6 +1829,7 @@
 				D128B4792645500700407B49 /* OrderStatusChangedNotificationModel.swift in Sources */,
 				91F47C5D25D2D8D3003DF40A /* DecimalFormatter.swift in Sources */,
 				913833E725DD75A9001E3DBD /* BaseBalanceCoordinatorDelegate.swift in Sources */,
+				F4BEE1922A96392800569DB9 /* GalleryPhotoButton.swift in Sources */,
 				91B1E66E25D82A24000E1486 /* BackButton1.swift in Sources */,
 				F40AB7502A6558C400730883 /* EmailValidator.swift in Sources */,
 				9149EBFC25EA9631003DE692 /* PresentableRetouchGroup.swift in Sources */,
@@ -1798,6 +1845,7 @@
 				32F18E3B28D61949009DF777 /* View+IsHidden.swift in Sources */,
 				91F47C7525D2D8D3003DF40A /* NavigationItemFactory.swift in Sources */,
 				91F47C7B25D2D8D3003DF40A /* KeychainService.swift in Sources */,
+				F4D449742A740D21002EA5B3 /* LoadableImage.swift in Sources */,
 				9191DEEE25FA38F600BA2AEF /* ShareHelper.swift in Sources */,
 				91F47C6B25D2D8D3003DF40A /* UIColor+Style.swift in Sources */,
 				9195BD0425D6D8F1006D3379 /* UIViewController+Child.swift in Sources */,
@@ -1836,12 +1884,12 @@
 				91F47C7025D2D8D3003DF40A /* Bundle+Modules.swift in Sources */,
 				D159243E26D69CCB00371208 /* LocalFeedbackService.swift in Sources */,
 				91EF681C25E6910900253BFC /* BuyView.swift in Sources */,
-				32DDCC8A28D8B03900036CF0 /* AssetImage.swift in Sources */,
 				91F47C7C25D2D8D3003DF40A /* RestApiConstants.swift in Sources */,
 				32409CFD28EDC05300C65C13 /* PopupView.swift in Sources */,
 				F40AB7532A6558C400730883 /* TextValidator.swift in Sources */,
 				91EE320B26204BF20069327F /* GemsParameters.swift in Sources */,
 				913833C225DD39CB001E3DBD /* CameraButton.swift in Sources */,
+				F489F4912A97500100783C1C /* PhotoButton.swift in Sources */,
 				D13CDE6B263ACE9B000FD01B /* RatingView.swift in Sources */,
 				91D1869B26302726001849A1 /* BeforeImage.swift in Sources */,
 				91BC4E1525E5327D00D25A09 /* SelectedRetouchGroup.swift in Sources */,

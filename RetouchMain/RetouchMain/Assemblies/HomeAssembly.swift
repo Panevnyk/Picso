@@ -36,22 +36,23 @@ final class HomeAssembly {
 }
 
 final class HomeHistoryAssembly {
-    var viewController: HomeHistoryViewController
-    var viewModel: HomeHistoryViewModelProtocol
+    var viewController: UIViewController
 
-    init(serviceFactory: ServiceFactoryProtocol) {
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: HomeHistoryCoordinatorDelegate?
+    ) {
         let viewModel = HomeHistoryViewModel(
             dataLoader: serviceFactory.makeDataLoader(),
             ordersLoader: serviceFactory.makeOrdersLoader(),
             retouchGroupsLoader: serviceFactory.makeRetouchGroupsLoader(),
-            savePhotoInfoService: serviceFactory.makeSavePhotoInfoService())
-        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.home)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeHistoryViewController") as! HomeHistoryViewController
-        viewController.viewModel = viewModel
-        viewModel.delegate = viewController
-
+            savePhotoInfoService: serviceFactory.makeSavePhotoInfoService(),
+            coordinatorDelegate: coordinatorDelegate
+        )
+        let view = HomeHistoryView(viewModel: viewModel)
+        let viewController = HomeHistoryViewHosting(rootView: view)
+        
         self.viewController = viewController
-        self.viewModel = viewModel
     }
 }
 
@@ -64,11 +65,13 @@ final class HomeGalleryAssembly {
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
 
-        let viewModel = HomeGalleryViewModel(dataLoader: serviceFactory.makeDataLoader(),
-                                             phImageLoader: serviceFactory.makePHImageLoader(),
-                                             assets: allPhotos,
-                                             expandableTitle: "All photos",
-                                             isBackHidden: true)
+        let viewModel = HomeGalleryViewModel(
+            dataLoader: serviceFactory.makeDataLoader(),
+            phImageLoader: serviceFactory.makePHImageLoader(),
+            assets: allPhotos,
+            expandableTitle: "All photos",
+            isBackHidden: true
+        )
         let view = HomeGalleryView(viewModel: viewModel)
         let viewController = HomeGalleryViewHosting(rootView: view)
 
@@ -122,8 +125,16 @@ final class OrderDetailAssembly {
     var viewController: OrderDetailViewController
     var viewModel: OrderDetailViewModelProtocol
 
-    init(serviceFactory: ServiceFactoryProtocol,
-         viewModel: OrderDetailViewModelProtocol) {
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        order: Order
+    ) {
+        let viewModel = OrderDetailViewModel(
+            ordersLoader: serviceFactory.makeOrdersLoader(),
+            retouchGroupsLoader: serviceFactory.makeRetouchGroupsLoader(),
+            feedbackService: serviceFactory.makeFeedbackService(),
+            order: order
+        )
         let storyboard = UIStoryboard(name: "Home", bundle: Bundle.home)
         let viewController = storyboard.instantiateViewController(withIdentifier: "OrderDetailViewController") as! OrderDetailViewController
         viewController.viewModel = viewModel

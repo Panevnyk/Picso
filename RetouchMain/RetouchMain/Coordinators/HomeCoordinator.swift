@@ -19,7 +19,7 @@ final class HomeCoordinator {
     private var cameraPresenter: CameraPresenterProtocol?
 
     private weak var homeViewController: HomeViewController?
-    private weak var homeHistoryViewController: HomeHistoryViewController?
+    private weak var homeHistoryViewController: HomeHistoryViewHosting?
     private weak var homeGalleryViewController: HomeGalleryViewHosting?
     private weak var photoViewController: PhotoGalleryViewHosting?
     private weak var retouchingPhotoViewController: RetouchingPhotoViewController?
@@ -52,9 +52,9 @@ final class HomeCoordinator {
 extension HomeCoordinator: HomeCoordinatorDelegate {
     public func setHomeHistory(from viewController: HomeViewController) {
         let homeHistoryAssembly = HomeHistoryAssembly(
-            serviceFactory: serviceFactory)
-        homeHistoryAssembly.viewController.coordinatorDelegate = self
-        homeHistoryViewController = homeHistoryAssembly.viewController
+            serviceFactory: serviceFactory,
+            coordinatorDelegate: self
+        )
 
         setChildController(homeHistoryAssembly.viewController, to: viewController)
     }
@@ -144,7 +144,7 @@ extension HomeCoordinator: PhotoGalleryViewCoordinatorDelegate {
 
 // MARK: - HomeHistoryCoordinatorDelegate
 extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
-    func didTapGallery(from viewController: HomeHistoryViewController) {
+    func didTapGallery() {
         phPhotoLibraryPresenter = serviceFactory.makePHPhotoLibraryPresenter()
         phPhotoLibraryPresenter?.requestPhotosAuthorization { [weak self] (isAuthorized) in
             guard let self = self else { return }
@@ -163,8 +163,8 @@ extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
         }
     }
 
-    func didTapCamera(from viewController: HomeHistoryViewController) {
-        presentCamera(from: viewController)
+    func didTapCamera() {
+        presentCamera(from: navigationController)
     }
 
     func presentCamera(from viewController: UIViewController) {
@@ -173,14 +173,10 @@ extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
         cameraPresenter?.presentCamera(from: viewController)
     }
 
-    func didSelectItem(_ item: Int, from viewController: HomeHistoryViewController) {
-        let order = viewController.viewModel.getOrder(for: item)
+    func didSelectOrderDetail(_ order: Order) {
         switch order.status {
         case .completed:
-            let viewModel = viewController.viewModel.makeOrderDetailViewModel(
-                item: item,
-                feedbackService: serviceFactory.makeFeedbackService())
-            presentOrderDetail(viewModel: viewModel)
+            presentOrderDetail(order: order)
         case .canceled:
             presentCanceledPhoto(by: order)
         case .waiting, .confirmed, .waitingForReview, .inReview, .redoByLeadDesigner:
@@ -188,10 +184,10 @@ extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
         }
     }
 
-    func presentOrderDetail(viewModel: OrderDetailViewModelProtocol) {
+    func presentOrderDetail(order: Order) {
         let orderDetailAssembly = OrderDetailAssembly(
             serviceFactory: serviceFactory,
-            viewModel: viewModel)
+            order: order)
         self.orderDetailViewController = orderDetailAssembly.viewController
 
         navigationController.pushViewController(orderDetailAssembly.viewController, animated: true)
