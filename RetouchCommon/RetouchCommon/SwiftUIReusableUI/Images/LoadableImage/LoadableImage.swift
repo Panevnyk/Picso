@@ -7,11 +7,12 @@
 
 import SwiftUI
 import UIKit
+import Kingfisher
 
 public struct LoadableImage: View {
     private let imageUrl: String?
     private let placeholder: (name: String, bundle: Bundle)?
-    private let contentMode: ContentMode
+    private let contentMode: SwiftUI.ContentMode
     private let targetSize: CGSize?
     private var action: (() -> Void)?
     
@@ -26,7 +27,7 @@ public struct LoadableImage: View {
     public init(
         imageUrl: String?,
         placeholder: (name: String, bundle: Bundle)? = nil,
-        contentMode: ContentMode = .fill,
+        contentMode: SwiftUI.ContentMode = .fill,
         targetSize: CGSize? = nil,
         action: (() -> Void)? = nil
     ) {
@@ -59,15 +60,22 @@ public struct LoadableImage: View {
     }
      
     private var asyncImage: some View {
-        AsyncImage(url: url) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: contentMode)
-        } placeholder: {
+        KFImage.url(url)
+            .placeholder {
+                placeholderImage
+            }
+            .resizable()
+            .aspectRatio(contentMode: contentMode)
+    }
+    
+    private var placeholderImage: some View {
+        ZStack {
             if let placeholder = placeholder {
                 Image(placeholder.name, bundle: placeholder.bundle)
                     .resizable()
                     .aspectRatio(contentMode: contentMode)
+            } else {
+                ProgressView()
             }
         }
     }
