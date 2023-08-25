@@ -329,14 +329,14 @@
 			path = UIKitMessage;
 			sourceTree = "<group>";
 		};
-		91B45FBC25D417F30011FAD7 /* Gallery */ = {
+		91B45FBC25D417F30011FAD7 /* HomeGallery */ = {
 			isa = PBXGroup;
 			children = (
 				32F18E0128D4AE82009DF777 /* HomeGallery */,
 				32879A2728FEC33C00F117AA /* PhotoGallery */,
 				32D1F03028F580E7003B1849 /* AlbumGallery */,
 			);
-			path = Gallery;
+			path = HomeGallery;
 			sourceTree = "<group>";
 		};
 		91C00CAC25D2C75A00FF97A2 = {
@@ -404,7 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				91F47C9125D2D933003DF40A /* UIKitHome */,
-				91B45FBC25D417F30011FAD7 /* Gallery */,
+				91B45FBC25D417F30011FAD7 /* HomeGallery */,
 				F4D449622A72F30E002EA5B3 /* HomeHistory */,
 				D1B7022F2693571D0086C30F /* UIKitOrderDetail */,
 				915C6AC925D96B1200E74FD4 /* UIKitRetouchingPhoto */,
