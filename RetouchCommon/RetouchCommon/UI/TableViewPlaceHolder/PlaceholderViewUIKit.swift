@@ -7,10 +7,10 @@
 import UIKit
 
 public protocol PlaceholderViewDelegate: AnyObject {
-    func didTapActionButton(from view: PlaceholderView)
+    func didTapActionButton(from view: PlaceholderViewUIKit)
 }
 
-public final class PlaceholderView: BaseCustomView {
+public final class PlaceholderViewUIKit: BaseCustomView {
     // MARK: - Propeties
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subtitleLabel: UILabel!
@@ -38,7 +38,7 @@ public final class PlaceholderView: BaseCustomView {
 }
 
 // MARK: - Public methods
-extension PlaceholderView {
+extension PlaceholderViewUIKit {
     public func setTitle(_ text: String?) {
         titleLabel.text = text
     }
@@ -61,7 +61,7 @@ extension PlaceholderView {
 }
 
 // MARK: - Actions
-private extension PlaceholderView {
+private extension PlaceholderViewUIKit {
     @IBAction func actionOfActionButton(_ sender: Any) {
         delegate?.didTapActionButton(from: self)
     }

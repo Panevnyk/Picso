@@ -9,7 +9,7 @@ import UIKit
 import RetouchCommon
 
 public final class ForceUpdateAppVersionViewController: UIViewController {
-    private let placeholderView = PlaceholderView()
+    private let placeholderView = PlaceholderViewUIKit()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ public final class ForceUpdateAppVersionViewController: UIViewController {
 
 // MARK: - PlaceholderViewDelegate
 extension ForceUpdateAppVersionViewController: PlaceholderViewDelegate {
-    public func didTapActionButton(from view: PlaceholderView) {
+    public func didTapActionButton(from view: PlaceholderViewUIKit) {
         if let url = URL(string: Constants.retouchYouAppStoreLink) {
             UIApplication.shared.open(url)
             AnalyticsService.logAction(.forceUpdateAppVersion)

@@ -9,7 +9,7 @@ import Combine
 import Photos
 import RetouchCommon
 
-public protocol HomeGalleryViewCoordinatorDelegate: BaseBalanceCoordinatorDelegate, BaseCoordinatorDelegate {
+public protocol HomeGalleryCoordinatorDelegate: BaseBalanceCoordinatorDelegate, BaseCoordinatorDelegate {
     func didSelectPhoto(asset: PHAsset)
     func didSelectCamera()
 }
@@ -26,7 +26,7 @@ public class HomeGalleryViewModel: NSObject, ObservableObject {
 
     private var isViewAppeared = false
 
-    public weak var coordinatorDelegate: HomeGalleryViewCoordinatorDelegate?
+    private weak var coordinatorDelegate: HomeGalleryCoordinatorDelegate?
 
     // MARK: - Inits
     public init(
@@ -34,13 +34,15 @@ public class HomeGalleryViewModel: NSObject, ObservableObject {
         phImageLoader: PHImageLoaderProtocol,
         assets: PHFetchResult<PHAsset>,
         expandableTitle: String? = nil,
-        isBackHidden: Bool = true
+        isBackHidden: Bool = true,
+        coordinatorDelegate: HomeGalleryCoordinatorDelegate?
     ) {
         self.dataLoader = dataLoader
         self.phImageLoader = phImageLoader
         self.assets = assets
         self.expandableTitle = expandableTitle
         self.isBackHidden = isBackHidden
+        self.coordinatorDelegate = coordinatorDelegate
 
         super.init()
 

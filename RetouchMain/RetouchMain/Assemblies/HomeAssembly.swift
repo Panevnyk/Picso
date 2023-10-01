@@ -12,31 +12,36 @@ import RetouchCommon
 import SwiftUI
 
 final class HomeAssembly {
-    let viewModel: HomeViewModelProtocol
-    var viewController: HomeViewController
+    var viewController: HomeViewHosting
 
-    init(serviceFactory: ServiceFactoryProtocol) {
-        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.home)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        bodySource: HomeViewBodySource
+    ) {
         let viewModel = HomeViewModel(
             dataLoader: serviceFactory.makeDataLoader(),
             ordersLoader: serviceFactory.makeOrdersLoader(),
             retouchGroupsLoader: serviceFactory.makeRetouchGroupsLoader(),
             phPhotoLibraryPresenter: serviceFactory.makePHPhotoLibraryPresenter(),
             reachabilityService: serviceFactory.makeReachabilityService(),
-            freeGemCreditCountService: serviceFactory.makeFreeGemCreditCountService(),
-            delegate: viewController
+            freeGemCreditCountService: serviceFactory.makeFreeGemCreditCountService()
         )
-        viewController.viewModel = viewModel
+        let view = HomeView(
+            viewModel: viewModel,
+            bodySource: bodySource
+        )
+        let viewController = HomeViewHosting(
+            rootView: view,
+            hidesBottomBarWhenPushed: false
+        )
 
-        self.viewModel = viewModel
         self.viewController = viewController
     }
 }
 
 final class HomeHistoryAssembly {
-    var viewController: UIViewController
+    var viewController: HomeHistoryViewHosting
+    var view: HomeHistoryView
 
     init(
         serviceFactory: ServiceFactoryProtocol,
@@ -53,14 +58,19 @@ final class HomeHistoryAssembly {
         let viewController = HomeHistoryViewHosting(rootView: view)
         
         self.viewController = viewController
+        self.view = view
     }
 }
 
 final class HomeGalleryAssembly {
     var viewController: HomeGalleryViewHosting
-    var viewModel: HomeGalleryViewModel
+    var view: HomeGalleryView
 
-    init(serviceFactory: ServiceFactoryProtocol) {
+    init(
+        serviceFactory: ServiceFactoryProtocol,
+        coordinatorDelegate: HomeGalleryCoordinatorDelegate?,
+        isBackHidden: Bool = true
+    ) {
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
@@ -70,13 +80,14 @@ final class HomeGalleryAssembly {
             phImageLoader: serviceFactory.makePHImageLoader(),
             assets: allPhotos,
             expandableTitle: "All photos",
-            isBackHidden: true
+            isBackHidden: isBackHidden,
+            coordinatorDelegate: coordinatorDelegate
         )
         let view = HomeGalleryView(viewModel: viewModel)
         let viewController = HomeGalleryViewHosting(rootView: view)
 
         self.viewController = viewController
-        self.viewModel = viewModel
+        self.view = view
     }
 }
 

@@ -5,28 +5,21 @@
 //  Created by Vladyslav Panevnyk on 09.02.2021.
 //
 
+import Combine
 import RetouchCommon
 import RxSwift
 import RxCocoa
 import Photos
 
-public protocol HomeViewModelDelegate: AnyObject {
-    func presentHomeHistory()
-    func presentGallery()
-    func presentInternetConnectionError()
-    func presentFirstRetouchingForFreeAlert(diamondsCount: String, closeAction: (() -> Void)?)
+enum HomeViewState {
+    case gallery
+    case history
+    case noInternetConnection
+    case noAccessToGallery
+    case loading
 }
 
-public protocol HomeViewModelProtocol {
-    var delegate: HomeViewModelDelegate? { get set }
-
-    func loadData()
-    func getOrdersCount() -> Int
-    func getRetouchGroups() -> [RetouchGroup]
-    func requestPhotosAuthorization(completion: ((_ isAuthorized: Bool) -> Void)?)
-}
-
-public final class HomeViewModel: HomeViewModelProtocol {
+public final class HomeViewModel: ObservableObject {
     // MARK: - Protocol
     // Boundaries
     private let dataLoader: DataLoaderProtocol
@@ -43,26 +36,42 @@ public final class HomeViewModel: HomeViewModelProtocol {
     private var isNetworkConnected: Bool
     private var isDataNeedToReload: Bool = true
     private let disposeBag = DisposeBag()
-
-    // Delegate
-    public weak var delegate: HomeViewModelDelegate?
-
+    
+    @Published var state: HomeViewState = .loading
+    
+    lazy var noInternetConnectionViewModel: PlaceholderViewModel = {
+        PlaceholderViewModel(
+            image: UIImage(named: "icNoInternetConnection", in: Bundle.common, compatibleWith: nil),
+            title: "Ooops!",
+            subtitle: "It seems there is something wrong with your internet connection"
+        )
+    }()
+    
+    lazy var noAccessToGalleryViewModel: PlaceholderViewModel = {
+        PlaceholderViewModel(
+            image: UIImage(named: "icNoAccessToPhotoLibrary", in: Bundle.common, compatibleWith: nil),
+            title: "No access to photo library",
+            subtitle: "To enable access please\ngo to your device setting",
+            actionTitle: "Open Settings",
+            action: openSettings
+        )
+    }()
+    
     // MARK: - Inits
-    public init(dataLoader: DataLoaderProtocol,
-                ordersLoader: OrdersLoaderProtocol,
-                retouchGroupsLoader: RetouchGroupsLoaderProtocol,
-                phPhotoLibraryPresenter: PHPhotoLibraryPresenterProtocol,
-                reachabilityService: ReachabilityServiceProtocol,
-                freeGemCreditCountService: FreeGemCreditCountServiceProtocol,
-                delegate: HomeViewModelDelegate)
-    {
+    public init(
+        dataLoader: DataLoaderProtocol,
+        ordersLoader: OrdersLoaderProtocol,
+        retouchGroupsLoader: RetouchGroupsLoaderProtocol,
+        phPhotoLibraryPresenter: PHPhotoLibraryPresenterProtocol,
+        reachabilityService: ReachabilityServiceProtocol,
+        freeGemCreditCountService: FreeGemCreditCountServiceProtocol
+    ) {
         self.dataLoader = dataLoader
         self.ordersLoader = ordersLoader
         self.retouchGroupsLoader = retouchGroupsLoader
         self.phPhotoLibraryPresenter = phPhotoLibraryPresenter
         self.reachabilityService = reachabilityService
         self.freeGemCreditCountService = freeGemCreditCountService
-        self.delegate = delegate
         self.isNetworkConnected = reachabilityService.isNetworkConnected.value
 
         subscribeOnChanges()
@@ -77,7 +86,7 @@ public final class HomeViewModel: HomeViewModelProtocol {
     }
 
     public func getOrdersCount() -> Int {
-        return orders.count
+        return orders.count 
     }
 
     public func getRetouchGroups() -> [RetouchGroup] {
@@ -92,6 +101,11 @@ public final class HomeViewModel: HomeViewModelProtocol {
         return (UserData.shared.user.freeGemCreditCount ?? 0) > 0
         && ordersLoader.ordersPublisher.value.count == 0
         && freeGemCreditCountService.needToShowFreeGemsCountAlert
+    }
+    
+    private func openSettings() {
+        SettingsHelper.openSettings()
+        AnalyticsService.logAction(.openSettings)
     }
 }
 
@@ -130,7 +144,7 @@ private extension HomeViewModel {
         
         if needToShowFreeGemCreditCountAlert() {
             let diamondsCount = String(UserData.shared.user.freeGemCreditCount ?? 0)
-            self.delegate?.presentFirstRetouchingForFreeAlert(diamondsCount: diamondsCount) { [weak self] in
+            self.presentFirstRetouchingForFreeAlert(diamondsCount: diamondsCount) { [weak self] in
                 guard let self = self else { return }
                 self.freeGemCreditCountService.needToShowFreeGemsCountAlert = false
                 self.presentChildViewControllers()
@@ -142,11 +156,40 @@ private extension HomeViewModel {
     
     func presentChildViewControllers() {
         if !isNetworkConnected {
-            delegate?.presentInternetConnectionError()
+            state = .noInternetConnection
+            AnalyticsService.logScreen(.internetConnectionErrorAlert)
         } else if orders.isEmpty {
-            delegate?.presentGallery()
+            state = .loading
+        
+            requestPhotosAuthorization { [weak self] (isAuthorized) in
+                guard let self = self else { return }
+
+                if isAuthorized {
+                    self.state = .gallery
+                } else {
+                    self.state = .noAccessToGallery
+                    AnalyticsService.logScreen(.noAccessToGalleryAlert)
+                }
+            }
         } else {
-            delegate?.presentHomeHistory()
+            state = .history
         }
+    }
+}
+
+// MARK: - Alerts
+private extension HomeViewModel {
+    func presentFirstRetouchingForFreeAlert(diamondsCount: String, closeAction: (() -> Void)?) {
+        AnalyticsService.logScreen(.firstRetouchingForFreeAlert)
+        let gotIt = RTAlertAction(title: "Got it",
+                                  style: .default,
+                                  action: { closeAction?() })
+        let img = UIImage(named: "icFirstOrderForFree", in: Bundle.common, compatibleWith: nil)
+        let alert = RTAlertController(title: "First retouching\nfor free",
+                                      message: "Send your photo to our\ndesigners. You have \(diamondsCount) free\ndiamons for your first order.",
+                                      image: img,
+                                      actionPositionStyle: .horizontal)
+        alert.addActions([gotIt])
+        alert.show()
     }
 }

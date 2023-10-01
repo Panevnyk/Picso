@@ -18,9 +18,7 @@ final class HomeCoordinator {
     private var phPhotoLibraryPresenter: PHPhotoLibraryPresenterProtocol?
     private var cameraPresenter: CameraPresenterProtocol?
 
-    private weak var homeViewController: HomeViewController?
-    private weak var homeHistoryViewController: HomeHistoryViewHosting?
-    private weak var homeGalleryViewController: HomeGalleryViewHosting?
+    private weak var homeViewController: HomeViewHosting?
     private weak var photoViewController: PhotoGalleryViewHosting?
     private weak var retouchingPhotoViewController: RetouchingPhotoViewController?
     private weak var balanceViewController: BalanceViewController?
@@ -39,9 +37,11 @@ final class HomeCoordinator {
     }
 
     private func startHome(animated: Bool) {
-        let homeAssembly = HomeAssembly(serviceFactory: serviceFactory)
+        let homeAssembly = HomeAssembly(
+            serviceFactory: serviceFactory,
+            bodySource: self
+        )
         homeAssembly.viewController.setupTabBar()
-        homeAssembly.viewController.coordinatorDelegate = self
         self.homeViewController = homeAssembly.viewController
 
         navigationController.setViewControllers([homeAssembly.viewController], animated: animated)
@@ -49,26 +49,21 @@ final class HomeCoordinator {
 }
 
 // MARK: - HomeCoordinatorDelegate
-extension HomeCoordinator: HomeCoordinatorDelegate {
-    public func setHomeHistory(from viewController: HomeViewController) {
+extension HomeCoordinator: HomeViewBodySource {
+    func homeHistoryView() -> HomeHistoryView {
         let homeHistoryAssembly = HomeHistoryAssembly(
             serviceFactory: serviceFactory,
             coordinatorDelegate: self
         )
-
-        setChildController(homeHistoryAssembly.viewController, to: viewController)
+        return homeHistoryAssembly.view
     }
-
-    public func setGallery(from viewController: HomeViewController){
-        let homeGalleryAssembly = HomeGalleryAssembly(serviceFactory: serviceFactory)
-        homeGalleryAssembly.viewModel.coordinatorDelegate = self
-        homeGalleryViewController = homeGalleryAssembly.viewController
-
-        setChildController(homeGalleryAssembly.viewController, to: viewController)
-    }
-
-    private func setChildController(_ viewController: UIViewController, to parentViewController: HomeViewController) {
-        parentViewController.setChildController(viewController)
+    
+    func homeGalleryView() -> HomeGalleryView {
+        let homeGalleryAssembly = HomeGalleryAssembly(
+            serviceFactory: serviceFactory,
+            coordinatorDelegate: self
+        )
+        return homeGalleryAssembly.view
     }
 }
 
@@ -88,9 +83,10 @@ extension HomeCoordinator: BaseCoordinatorDelegate {
 }
 
 // MARK: - HomeGalleryViewCoordinatorDelegate
-extension HomeCoordinator: HomeGalleryViewCoordinatorDelegate {
+extension HomeCoordinator: HomeGalleryCoordinatorDelegate {
     public func didSelectPhoto(asset: PHAsset) {
-        let retouchGroups = homeViewController!.viewModel.getRetouchGroups()
+        guard let retouchGroups = homeViewController?.getRetouchGroups() else { return }
+        
         let photoAssembly = PhotoGalleryAssembly(
             serviceFactory: serviceFactory,
             retouchGroups: retouchGroups,
@@ -102,7 +98,8 @@ extension HomeCoordinator: HomeGalleryViewCoordinatorDelegate {
     }
 
     public func didSelectPhoto(image: UIImage, from viewController: UIViewController) {
-        let retouchGroups = homeViewController!.viewModel.getRetouchGroups()
+        guard let retouchGroups = homeViewController?.getRetouchGroups() else { return }
+        
         let photoAssembly = PhotoGalleryAssembly(
             serviceFactory: serviceFactory,
             retouchGroups: retouchGroups,
@@ -149,10 +146,11 @@ extension HomeCoordinator: HomeHistoryCoordinatorDelegate {
         phPhotoLibraryPresenter?.requestPhotosAuthorization { [weak self] (isAuthorized) in
             guard let self = self else { return }
             if isAuthorized {
-                let homeGalleryAssembly = HomeGalleryAssembly(serviceFactory: self.serviceFactory)
-                homeGalleryAssembly.viewModel.coordinatorDelegate = self
-                homeGalleryAssembly.viewModel.isBackHidden = false
-                self.homeGalleryViewController = homeGalleryAssembly.viewController
+                let homeGalleryAssembly = HomeGalleryAssembly(
+                    serviceFactory: self.serviceFactory,
+                    coordinatorDelegate: self,
+                    isBackHidden: false
+                )
 
                 self.navigationController.pushViewController(homeGalleryAssembly.viewController, animated: true)
             } else {

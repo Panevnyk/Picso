@@ -27,8 +27,8 @@
 		910483B725E931A5003DAA47 /* RetouchGroupRestApiMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910483B625E931A5003DAA47 /* RetouchGroupRestApiMethods.swift */; };
 		9112A815260A36DE00042B65 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112A814260A36DE00042B65 /* PushNotificationService.swift */; };
 		9112A81B260A390800042B65 /* UpdatePushNotificationTokenParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112A81A260A390800042B65 /* UpdatePushNotificationTokenParameters.swift */; };
-		913833B125DD1FDA001E3DBD /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913833AF25DD1FDA001E3DBD /* PlaceholderView.swift */; };
-		913833B225DD1FDA001E3DBD /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913833B025DD1FDA001E3DBD /* PlaceholderView.xib */; };
+		913833B125DD1FDA001E3DBD /* PlaceholderViewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913833AF25DD1FDA001E3DBD /* PlaceholderViewUIKit.swift */; };
+		913833B225DD1FDA001E3DBD /* PlaceholderViewUIKit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913833B025DD1FDA001E3DBD /* PlaceholderViewUIKit.xib */; };
 		913833BC25DD367E001E3DBD /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913833BB25DD367E001E3DBD /* SettingsHelper.swift */; };
 		913833C225DD39CB001E3DBD /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913833C125DD39CB001E3DBD /* CameraButton.swift */; };
 		913833C925DD3D09001E3DBD /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913833C825DD3D09001E3DBD /* CameraPresenter.swift */; };
@@ -194,6 +194,8 @@
 		F40AB7572A6558C400730883 /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB74F2A6558C400730883 /* CodeValidator.swift */; };
 		F40AB75A2A6558CA00730883 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40AB7592A6558CA00730883 /* CheckBoxView.swift */; };
 		F465939B2A6E859B00BE9BB5 /* RestApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */; };
+		F486B5DA2A9B478A00655A4A /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486B5D92A9B478A00655A4A /* PlaceholderView.swift */; };
+		F486B5DD2A9B4B4100655A4A /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486B5DC2A9B4B4100655A4A /* MainButton.swift */; };
 		F489F4912A97500100783C1C /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489F4902A97500100783C1C /* PhotoButton.swift */; };
 		F4BEE1902A96306200569DB9 /* StatusBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */; };
 		F4BEE1922A96392800569DB9 /* GalleryPhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */; };
@@ -261,8 +263,8 @@
 		910483B625E931A5003DAA47 /* RetouchGroupRestApiMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetouchGroupRestApiMethods.swift; sourceTree = "<group>"; };
 		9112A814260A36DE00042B65 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		9112A81A260A390800042B65 /* UpdatePushNotificationTokenParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePushNotificationTokenParameters.swift; sourceTree = "<group>"; };
-		913833AF25DD1FDA001E3DBD /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		913833B025DD1FDA001E3DBD /* PlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
+		913833AF25DD1FDA001E3DBD /* PlaceholderViewUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewUIKit.swift; sourceTree = "<group>"; };
+		913833B025DD1FDA001E3DBD /* PlaceholderViewUIKit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceholderViewUIKit.xib; sourceTree = "<group>"; };
 		913833BB25DD367E001E3DBD /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		913833C125DD39CB001E3DBD /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		913833C825DD3D09001E3DBD /* CameraPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
@@ -432,6 +434,8 @@
 		F40AB74F2A6558C400730883 /* CodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
 		F40AB7592A6558CA00730883 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		F465939A2A6E859B00BE9BB5 /* RestApiManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManagerMock.swift; sourceTree = "<group>"; };
+		F486B5D92A9B478A00655A4A /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		F486B5DC2A9B4B4100655A4A /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		F489F4902A97500100783C1C /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
 		F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadgeView.swift; sourceTree = "<group>"; };
 		F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoButton.swift; sourceTree = "<group>"; };
@@ -608,6 +612,7 @@
 		32F18E4028D619A1009DF777 /* SwiftUIReusableUI */ = {
 			isa = PBXGroup;
 			children = (
+				F486B5D82A9B477400655A4A /* PlaceholderView */,
 				F4BEE1952A96397E00569DB9 /* Images */,
 				F4BEE1942A96395600569DB9 /* Buttons */,
 				F4BEE18E2A96305800569DB9 /* StatusBadgeView */,
@@ -649,8 +654,8 @@
 		913833AE25DD1FDA001E3DBD /* TableViewPlaceHolder */ = {
 			isa = PBXGroup;
 			children = (
-				913833AF25DD1FDA001E3DBD /* PlaceholderView.swift */,
-				913833B025DD1FDA001E3DBD /* PlaceholderView.xib */,
+				913833AF25DD1FDA001E3DBD /* PlaceholderViewUIKit.swift */,
+				913833B025DD1FDA001E3DBD /* PlaceholderViewUIKit.xib */,
 			);
 			path = TableViewPlaceHolder;
 			sourceTree = "<group>";
@@ -1542,6 +1547,22 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		F486B5D82A9B477400655A4A /* PlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				F486B5D92A9B478A00655A4A /* PlaceholderView.swift */,
+			);
+			path = PlaceholderView;
+			sourceTree = "<group>";
+		};
+		F486B5DB2A9B4B3300655A4A /* MainButton */ = {
+			isa = PBXGroup;
+			children = (
+				F486B5DC2A9B4B4100655A4A /* MainButton.swift */,
+			);
+			path = MainButton;
+			sourceTree = "<group>";
+		};
 		F489F48F2A974FF000783C1C /* PhotoButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1569,6 +1590,7 @@
 		F4BEE1942A96395600569DB9 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F486B5DB2A9B4B3300655A4A /* MainButton */,
 				32B3DD1E290BCAAA002D5BBD /* OrderButton */,
 				32409CFA28EDA4DC00C65C13 /* BackSwiftButton */,
 				F4BEE1932A96393700569DB9 /* GalleryPhotoButton */,
@@ -1698,7 +1720,7 @@
 				D14594FA2668F4CB000EE7E6 /* DescriptionView.xib in Resources */,
 				91EF681725E68C7300253BFC /* BeforeAfterImagePresentableView.xib in Resources */,
 				D145950126690E89000EE7E6 /* DetailTagAlertContentView.xib in Resources */,
-				913833B225DD1FDA001E3DBD /* PlaceholderView.xib in Resources */,
+				913833B225DD1FDA001E3DBD /* PlaceholderViewUIKit.xib in Resources */,
 				917A9D0F25DC039B006E8963 /* LongTapTutorialView.xib in Resources */,
 				9153ED35260DD1BA00E4C83D /* AuthHeaderView.xib in Resources */,
 				32F18E3428D61949009DF777 /* Colors.xcassets in Resources */,
@@ -1804,6 +1826,7 @@
 				9112A81B260A390800042B65 /* UpdatePushNotificationTokenParameters.swift in Sources */,
 				D13CDE70263ACFC8000FD01B /* StarButton.swift in Sources */,
 				91F47C6F25D2D8D3003DF40A /* UIView+Nib.swift in Sources */,
+				F486B5DA2A9B478A00655A4A /* PlaceholderView.swift in Sources */,
 				D1AE9C232859078700F4BDF2 /* UIImage+ScalePreservingAspectRatio.swift in Sources */,
 				91B4FA70260692F300B58A34 /* Constants.swift in Sources */,
 				D125839427B96AD90091975D /* FreeGemCreditCountService.swift in Sources */,
@@ -1874,13 +1897,14 @@
 				D14594F52668E7F9000EE7E6 /* TriangleView.swift in Sources */,
 				D128B47726454F4200407B49 /* PushNotificationModel.swift in Sources */,
 				91F47C5B25D2D8D3003DF40A /* PercentFormatter.swift in Sources */,
-				913833B125DD1FDA001E3DBD /* PlaceholderView.swift in Sources */,
+				913833B125DD1FDA001E3DBD /* PlaceholderViewUIKit.swift in Sources */,
 				910483B725E931A5003DAA47 /* RetouchGroupRestApiMethods.swift in Sources */,
 				91F47C8525D2D8D3003DF40A /* OrderParameters.swift in Sources */,
 				91CF929F25D543D5000D7130 /* BaseKeyboardObservableViewController.swift in Sources */,
 				D14EEBF1287C6FE200528A16 /* KeychainBacked.swift in Sources */,
 				91F47C6E25D2D8D3003DF40A /* ReusableCell.swift in Sources */,
 				91F47C5225D2D8D3003DF40A /* MainTab.swift in Sources */,
+				F486B5DD2A9B4B4100655A4A /* MainButton.swift in Sources */,
 				91F47C7025D2D8D3003DF40A /* Bundle+Modules.swift in Sources */,
 				D159243E26D69CCB00371208 /* LocalFeedbackService.swift in Sources */,
 				91EF681C25E6910900253BFC /* BuyView.swift in Sources */,
