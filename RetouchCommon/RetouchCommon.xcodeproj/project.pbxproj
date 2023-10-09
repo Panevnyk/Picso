@@ -200,6 +200,10 @@
 		F4BEE1902A96306200569DB9 /* StatusBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */; };
 		F4BEE1922A96392800569DB9 /* GalleryPhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */; };
 		F4D449742A740D21002EA5B3 /* LoadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D449732A740D21002EA5B3 /* LoadableImage.swift */; };
+		F4EFB6A72ACD598B00FF09EC /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFB6A62ACD598B00FF09EC /* AlertPresenter.swift */; };
+		F4EFB6A92ACD5A1F00FF09EC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFB6A82ACD5A1F00FF09EC /* AlertView.swift */; };
+		F4EFB6AB2ACD5AD000FF09EC /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFB6AA2ACD5AD000FF09EC /* AlertViewModel.swift */; };
+		F4EFB6AD2ACD5B1600FF09EC /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFB6AC2ACD5B1600FF09EC /* View+CornerRadius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +444,10 @@
 		F4BEE18F2A96306200569DB9 /* StatusBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadgeView.swift; sourceTree = "<group>"; };
 		F4BEE1912A96392800569DB9 /* GalleryPhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoButton.swift; sourceTree = "<group>"; };
 		F4D449732A740D21002EA5B3 /* LoadableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImage.swift; sourceTree = "<group>"; };
+		F4EFB6A62ACD598B00FF09EC /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		F4EFB6A82ACD5A1F00FF09EC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		F4EFB6AA2ACD5AD000FF09EC /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		F4EFB6AC2ACD5B1600FF09EC /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -579,6 +587,7 @@
 			children = (
 				32F18E2328D61948009DF777 /* Styles */,
 				32F18E2928D61948009DF777 /* View+IsHidden.swift */,
+				F4EFB6AC2ACD5B1600FF09EC /* View+CornerRadius.swift */,
 			);
 			path = SwiftUIExtensions;
 			sourceTree = "<group>";
@@ -612,6 +621,7 @@
 		32F18E4028D619A1009DF777 /* SwiftUIReusableUI */ = {
 			isa = PBXGroup;
 			children = (
+				F4EFB6A52ACD596400FF09EC /* AlertView */,
 				F486B5D82A9B477400655A4A /* PlaceholderView */,
 				F4BEE1952A96397E00569DB9 /* Images */,
 				F4BEE1942A96395600569DB9 /* Buttons */,
@@ -1616,6 +1626,16 @@
 			path = LoadableImage;
 			sourceTree = "<group>";
 		};
+		F4EFB6A52ACD596400FF09EC /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFB6A62ACD598B00FF09EC /* AlertPresenter.swift */,
+				F4EFB6A82ACD5A1F00FF09EC /* AlertView.swift */,
+				F4EFB6AA2ACD5AD000FF09EC /* AlertViewModel.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1790,6 +1810,7 @@
 				F4BEE1902A96306200569DB9 /* StatusBadgeView.swift in Sources */,
 				91BC4DC725E3C12D00D25A09 /* DeviceIdService.swift in Sources */,
 				91F47C5825D2D8D3003DF40A /* BaseSelectableView.swift in Sources */,
+				F4EFB6AB2ACD5AD000FF09EC /* AlertViewModel.swift in Sources */,
 				D10E201C268B4A0A00811CDB /* Constants+Analytics.swift in Sources */,
 				91F47C5F25D2D8D3003DF40A /* NLettersPercentFormatter.swift in Sources */,
 				9153ED2F260DD1AE00E4C83D /* AuthHeaderView.swift in Sources */,
@@ -1855,11 +1876,13 @@
 				F4BEE1922A96392800569DB9 /* GalleryPhotoButton.swift in Sources */,
 				91B1E66E25D82A24000E1486 /* BackButton1.swift in Sources */,
 				F40AB7502A6558C400730883 /* EmailValidator.swift in Sources */,
+				F4EFB6A72ACD598B00FF09EC /* AlertPresenter.swift in Sources */,
 				9149EBFC25EA9631003DE692 /* PresentableRetouchGroup.swift in Sources */,
 				D1252A9F28B0DFFA00708846 /* SilentOrdersLoader.swift in Sources */,
 				91B1E64725D804DA000E1486 /* ImagePresentableView.swift in Sources */,
 				91F47C5725D2D8D3003DF40A /* BaseCustomView.swift in Sources */,
 				91EF683F25E6953800253BFC /* ImageInfoContainerViewModel.swift in Sources */,
+				F4EFB6AD2ACD5B1600FF09EC /* View+CornerRadius.swift in Sources */,
 				91E3C3DE261DE6F9004A7856 /* RTAlertAction.swift in Sources */,
 				D1D274AC2642CCD8009F08FC /* SmallRatingView.swift in Sources */,
 				91F47C5625D2D8D3003DF40A /* BaseScrollViewController.swift in Sources */,
@@ -1921,6 +1944,7 @@
 				910483B125E930E2003DAA47 /* RetouchGroupsLoader.swift in Sources */,
 				9191DEFE25FA6CB000BA2AEF /* ToastHelper.swift in Sources */,
 				913833BC25DD367E001E3DBD /* SettingsHelper.swift in Sources */,
+				F4EFB6A92ACD5A1F00FF09EC /* AlertView.swift in Sources */,
 				915115D8260119B6006FCD60 /* NotificationCenterHelper.swift in Sources */,
 				F40AB7572A6558C400730883 /* CodeValidator.swift in Sources */,
 				D1E2E0BA2698793900B72A34 /* UserDefaultsBacked.swift in Sources */,

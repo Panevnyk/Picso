@@ -14,6 +14,7 @@ public struct AssetsGalleryView: View {
 
     private let assets: PHFetchResult<PHAsset>
     private var action: (_ asset: PHAsset) -> Void
+    private var refreshable: @Sendable () async -> Void
 
     private let columns = [
         GridItem(spacing: AssetsGalleryView.spacing),
@@ -26,11 +27,14 @@ public struct AssetsGalleryView: View {
         return CGSize(width: targetSide, height: targetSide)
     }
 
-    public init(assets: PHFetchResult<PHAsset>,
-                action: @escaping (_ asset: PHAsset) -> Void
+    public init(
+        assets: PHFetchResult<PHAsset>,
+        action: @escaping (_ asset: PHAsset) -> Void,
+        refreshable: @escaping @Sendable () async -> Void
     ) {
         self.assets = assets
         self.action = action
+        self.refreshable = refreshable
     }
 
     public var body: some View {
@@ -51,5 +55,6 @@ public struct AssetsGalleryView: View {
             }
         }
         .padding([.all], AssetsGalleryView.spacing)
+        .refreshable(action: refreshable)
     }
 }

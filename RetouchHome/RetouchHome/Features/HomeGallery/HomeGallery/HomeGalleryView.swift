@@ -36,20 +36,18 @@ public struct HomeGalleryView: View {
                     backAction: viewModel.didSelectBack
                 )
                 
-                ScrollView {
-                    AssetsGalleryView(
-                        assets: viewModel.assets,
-                        action: viewModel.didSelectPhoto
-                    )
-                    .popup(
-                        show: $viewModel.expandableShowDetail,
-                        insets: UIEdgeInsets(top: -4, left: 24, bottom: 24, right: 24),
-                        content: albumGalleryView
-                    )
-                }
-                .refreshable {
-                    await viewModel.refreshData()
-                }
+                AssetsGalleryView(
+                    assets: viewModel.assets,
+                    action: viewModel.didSelectPhoto,
+                    refreshable: {
+                        await viewModel.refreshData()
+                    }
+                )
+                .popup(
+                    show: $viewModel.expandableShowDetail,
+                    insets: UIEdgeInsets(top: -4, left: 24, bottom: 24, right: 24),
+                    content: albumGalleryView
+                )
             }
 
             PhotoButton(action: viewModel.didSelectCamera)
